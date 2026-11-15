@@ -51,3 +51,18 @@
 - **미오(`@_3io.log_`) 확정 피드 이미지 15컷**을 [`mio_feed/`](mio_feed/) 에 정리했습니다. (기존 확정 2컷 + 신규 생성 13컷, 전 컷 4:5)
 - 각 컷의 컨셉·추천 용도는 [`mio_feed/README.md`](mio_feed/README.md) 참조.
 - 2주차 14일 업로드 계획표·해시태그 전략은 노션 가이드 페이지 참조.
+
+## 🎲 2026-11-16 v2 업데이트 — 랜덤 프롬프트 생성기 + 일상 피드 12컷
+
+기운님 피드백("앞머리가 너무 일정하지 않나 ㅋㅋ … 랜덤으로 뽑아주는 깃 레포 있으면 그런 거 쓰자")에 따라
+[`fairy-root/Flux-Prompt-Generator`](https://github.com/fairy-root/Flux-Prompt-Generator)(MIT) 구조를 참고한
+미오 전용 생성기를 만들고, 그걸로 뽑은 12컷을 추가했습니다.
+
+- **[`prompt_randomizer/`](prompt_randomizer/)** — `generate_prompts.py` + `pools.json`
+  (노페이스 장면 14 / 헤어 14 / 의상 14 / 인물 구도 12 / 장소 12 / 표정 7 / 카메라 6).
+  시드 고정·배치 내 중복 없는 추출·장소별 조명 매칭으로 "같은 앞머리, 같은 포즈"를 구조적으로 제거.
+  사용법은 [`prompt_randomizer/README.md`](prompt_randomizer/README.md).
+- **[`mio_feed_v2/`](mio_feed_v2/)** — 노페이스 4컷 + 인물 8컷 (전 컷 1080×1350, 4:5).
+  헤어 8종·의상 8종·구도 8종 전부 상이, 정면 카메라 응시 0컷. 컨택트시트 [`mio_feed_v2/mio_v2_grid.jpg`](mio_feed_v2/mio_v2_grid.jpg),
+  컷별 시드·프롬프트 표는 [`mio_feed_v2/README.md`](mio_feed_v2/README.md).
+- 기존 `mio_feed/` 15컷은 스토리·릴스 커버용으로 그대로 유지합니다.
