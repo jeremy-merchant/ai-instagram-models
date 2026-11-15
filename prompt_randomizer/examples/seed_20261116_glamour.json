@@ -1,0 +1,141 @@
+{
+  "seed": 20261116,
+  "items": [
+    {
+      "id": "01",
+      "mode": "glamour",
+      "seed": 20261116,
+      "label_ko": "느슨한 로우 번 · 호텔 배스로브 (허리 느슨히) · 호텔 아침 가운",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 16 Pro 3x telephoto lens, slightly compressed. Keep the woman's face from the reference photo identical (same eyes, nose, mouth, face shape, skin tone); change everything else: her black hair loosely gathered in a low bun at the nape of her neck, a few strands falling out, no bangs across the forehead. She is wearing a thick white hotel bathrobe, loosely tied at the waist, the collar slipped off one shoulder, the sleeve pushed up, long enough to cover her to the knees. She sits on the edge of an unmade hotel bed with the duvet crumpled behind her, knees drawn up, both hands around a white ceramic cup of coffee, her head turned to look out of the tall window, a soft sleepy expression, not looking at the camera. Place: a hotel room in the morning, an unmade white bed, a half-open suitcase, a tall window with a grey city view. Expression: a faint closed-mouth smile. Light: flat pale morning light from the window, no sun, slightly overexposed at the glass. Everyday and imperfect: part of the table or a chair back blocks the bottom corner. Real skin with visible pores and small texture, light everyday makeup, no beauty retouching, no skin smoothing, no glow. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
+      "combo": {
+        "look": "g_look_hotel",
+        "hairstyle": "g_low_bun_loose",
+        "clothing": "g_hotel_bathrobe",
+        "shot": "g_hotel_window_coffee",
+        "place": "g_hotel_room",
+        "expression": "입꼬리만 살짝 올린 미소",
+        "lighting": "흐린 아침 창빛",
+        "device": "아이폰 16 프로 3배 망원"
+      }
+    },
+    {
+      "id": "02",
+      "mode": "glamour",
+      "seed": 20261116,
+      "label_ko": "물에 젖어 뒤로 넘긴 머리 · 아이보리 투피스 수영복 + 허리 타월 · 풀빌라 수영장",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 16 Pro main camera. Keep the woman's face from the reference photo identical (same eyes, nose, mouth, face shape, skin tone); change everything else: her long black hair soaking wet, pushed back off her face, damp strands stuck to her neck and shoulders, still dripping a little. She is wearing an ivory two-piece swimsuit under a white hotel beach towel wrapped around her waist, and a second thin towel hanging over one shoulder. She stands on the pool steps half turned towards the friend beside her who has just said something, head in profile, laughing openly, eyes squinting, not looking at the lens, one hand lifted in the middle of a gesture. Place: the edge of a small private pool at a villa in Okinawa, bright choppy water, a faded plastic pool float drifting, a grey concrete wall and a strip of tropical leaves. Expression: a playful slight pout. Light: bright late-afternoon summer sun, hard shadows, ordinary contrast, the wall slightly overexposed. Everyday and imperfect: one corner is overexposed by a window or a lamp. Real skin with visible pores and small texture, light everyday makeup, no beauty retouching, no skin smoothing, no glow. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
+      "combo": {
+        "look": "g_look_pool",
+        "hairstyle": "g_wet_back",
+        "clothing": "g_ivory_bikini_towel",
+        "shot": "g_pool_step_laugh",
+        "place": "g_pool_villa",
+        "expression": "장난스럽게 삐죽",
+        "lighting": "늦은 오후 강한 햇빛",
+        "device": "아이폰 16 프로"
+      }
+    },
+    {
+      "id": "03",
+      "mode": "glamour",
+      "seed": 20261116,
+      "label_ko": "운동 후 높은 포니테일 (땀기) · 블랙 수영복 상의 + 데님 쇼츠 · 리조트 선베드",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 16 Pro 3x telephoto lens, slightly compressed. Keep the woman's face from the reference photo identical (same eyes, nose, mouth, face shape, skin tone); change everything else: all of her black hair pulled up into one tight high ponytail at the crown, the nape of her neck bare, a few damp strands stuck to her temple. She is wearing a simple black swimsuit top and light denim shorts, a loose striped cotton shirt bunched under her elbow, a thin gold anklet. She lies on her stomach on a white sunbed, propped up on her elbows, holding a tall glass of iced drink with a paper straw near her mouth, taking a sip, sunglasses pushed up on top of her head, looking at the friend. Place: a resort pool deck in Okinawa in the early afternoon, a white sunbed, a white umbrella, palm shadows on the concrete, another sunbed with a bag on it. Expression: sleepy half-lidded eyes. Light: bright slightly harsh afternoon sun with hard shadows across the sunbed, a little overexposed at the top of the frame. Everyday and imperfect: a passer-by's shoulder cuts into the edge of the frame. Real skin with visible pores and small texture, light everyday makeup, no beauty retouching, no skin smoothing, no glow. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
+      "combo": {
+        "look": "g_look_sunbed",
+        "hairstyle": "g_high_pony_wet",
+        "clothing": "g_swim_top_shorts",
+        "shot": "g_sunbed_lie",
+        "place": "g_resort_deck",
+        "expression": "졸린 듯 반쯤 감은 눈",
+        "lighting": "한낮 햇빛",
+        "device": "아이폰 16 프로 3배 망원"
+      }
+    },
+    {
+      "id": "04",
+      "mode": "glamour",
+      "seed": 20261116,
+      "label_ko": "운동 후 높은 포니테일 (땀기) · 블랙 스포츠 브라탑 + 하이웨이스트 레깅스 · 필라테스 거울 셀카",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 16 Pro main camera. Keep the woman's face from the reference photo identical (same eyes, nose, mouth, face shape, skin tone); change everything else: all of her black hair pulled up into one tight high ponytail at the crown, the nape of her neck bare, a few damp strands stuck to her temple. She is wearing a fitted black athletic crop top with thin straps and high-waisted charcoal leggings that come up over her waist, a thin sheen of sweat on her shoulders. She stands slightly sideways in the full-length mirror with one hip out, holding the phone at chest height in one hand, the other hand resting on her waist; in the mirror the back of the phone is clearly visible with three big round lenses in a triangle — the newest model, not an old single-lens phone. The phone is a current iPhone 16 Pro in natural titanium: large square camera plate on the upper left with three big round lenses in a triangle, a small flash and a LiDAR dot. Place: a small pilates studio after a class, wooden floor, a reformer machine at the edge, a grey wall with a hand-sanitizer bottle and a folded towel shelf. Expression: sleepy half-lidded eyes. Light: flat daylight from a window, uneven exposure. Everyday and imperfect: the phone was tilted and the verticals lean a little. Real skin with visible pores and small texture, light everyday makeup, no beauty retouching, no skin smoothing, no glow. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
+      "combo": {
+        "look": "g_look_gym",
+        "hairstyle": "g_high_pony_wet",
+        "clothing": "g_black_sports_set",
+        "shot": "g_gym_mirror",
+        "place": "g_pilates_studio",
+        "expression": "졸린 듯 반쯤 감은 눈",
+        "lighting": "낮 창가 빛",
+        "device": "아이폰 16 프로"
+      }
+    },
+    {
+      "id": "05",
+      "mode": "glamour",
+      "seed": 20261116,
+      "label_ko": "앞머리 없는 센터 가르마 · 크롭 나시 + 로우라이즈 데님 · 여름 도쿄 거리",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 15 Pro main camera. Keep the woman's face from the reference photo identical (same eyes, nose, mouth, face shape, skin tone); change everything else: her black hair parted in the middle with no bangs, straight and tucked behind both ears, a little shiny at the roots from the heat. She is wearing a tight ribbed white cropped tank top that ends above her waist and low-rise light-wash baggy jeans with a thin belt, white sneakers. She is walking towards the camera but looking off to the side at a shop window, one hand pushing her hair back, the other holding a cold plastic bottle, body slightly off-centre in the frame. Place: a narrow Tokyo lane on a hot summer day, a vending machine, potted plants outside a shop, a bicycle leaning on the wall, overhead cables, a few pedestrians far behind. Expression: a drowsy, near-neutral expression. Light: harsh midday summer sun, hard shadows, the pavement bright and slightly blown out. Everyday and imperfect: a passer-by's shoulder cuts into the edge of the frame. Real skin with visible pores and small texture, light everyday makeup, no beauty retouching, no skin smoothing, no glow. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
+      "combo": {
+        "look": "g_look_street",
+        "hairstyle": "g_center_part",
+        "clothing": "g_crop_tank_lowrise",
+        "shot": "g_street_walk",
+        "place": "g_tokyo_street",
+        "expression": "무표정에 가까운 나른한 표정",
+        "lighting": "한낮 직사광",
+        "device": "아이폰 15 프로"
+      }
+    },
+    {
+      "id": "06",
+      "mode": "glamour",
+      "seed": 20261116,
+      "label_ko": "해변의 자연스러운 웨이브 · 블랙 컷아웃 원피스 수영복 + 시스루 셔츠 · 해질녘 해변",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 16 Pro main camera. Keep the woman's face from the reference photo identical (same eyes, nose, mouth, face shape, skin tone); change everything else: her black hair in loose salt-air waves, tucked behind one ear, the ends a little frizzy from the sea air. She is wearing a black one-piece swimsuit with cut-out sides and a high neck, and over it a large sheer white cotton shirt hanging loose and open from both shoulders. She is walking away along the wet sand and turning her head back towards the friend, half her face hidden in her hair, half smiling, one arm swinging mid-step. Place: a flat Okinawa beach just before sunset, grey-blue sea, a thin band of pale orange at the horizon, two distant figures with a beach umbrella, wet sand mirroring the sky. Expression: a drowsy, near-neutral expression. Light: low flat light, slightly cool, no warm golden glow, the sun already behind clouds. Everyday and imperfect: there is slight motion blur on her hand. Real skin with visible pores and small texture, light everyday makeup, no beauty retouching, no skin smoothing, no glow. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
+      "combo": {
+        "look": "g_look_beach",
+        "hairstyle": "g_beach_waves",
+        "clothing": "g_cutout_onepiece_sheer",
+        "shot": "g_beach_walk_turn",
+        "place": "g_beach_dusk",
+        "expression": "무표정에 가까운 나른한 표정",
+        "lighting": "해질녘 낮은 빛",
+        "device": "아이폰 16 프로"
+      }
+    },
+    {
+      "id": "07",
+      "mode": "glamour",
+      "seed": 20261116,
+      "label_ko": "집게핀 올림머리 (목욕 후) · 남색 줄무늬 유카타 (느슨히) · 료칸 유카타",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 15 Pro 3x telephoto lens, slightly compressed. Keep the woman's face from the reference photo identical (same eyes, nose, mouth, face shape, skin tone); change everything else: her black hair twisted up and clipped with a large plastic claw clip at the back of her head, the nape of her neck and ears bare, loose strands on her cheek. She is wearing a simple navy-and-white thin-striped cotton yukata, loosely wrapped and tied at the waist with a plain soft obi, the collar sitting a little open at the neck, one shoulder slipping down. She sits on the floor with her legs folded to one side, holding the phone up with one hand at a slightly high angle, chin a bit low, smiling naturally at the screen, not posing, caught mid-expression. Place: a tatami room in a small Japanese ryokan in the evening, a low wooden table with a teapot and cups, a shoji door half open onto a dark garden, a folded futon in the corner. Expression: a playful slight pout. Light: warm dim paper-lantern light, uneven, the corners of the room in shadow. Everyday and imperfect: the framing is slightly crooked and she is not centred. Real skin with visible pores and small texture, light everyday makeup, no beauty retouching, no skin smoothing, no glow. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
+      "combo": {
+        "look": "g_look_ryokan",
+        "hairstyle": "g_claw_clip",
+        "clothing": "g_striped_yukata",
+        "shot": "g_ryokan_selfie",
+        "place": "g_ryokan",
+        "expression": "장난스럽게 삐죽",
+        "lighting": "종이등 불빛",
+        "device": "아이폰 15 프로 3배 망원"
+      }
+    },
+    {
+      "id": "08",
+      "mode": "glamour",
+      "seed": 20261116,
+      "label_ko": "목욕 후 반쯤 묶은 젖은 머리 · 샴페인 새틴 캐미솔 + 코튼 쇼츠 · 자취방 밤 캐미솔",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 16 Pro 3x telephoto lens, slightly compressed. Keep the woman's face from the reference photo identical (same eyes, nose, mouth, face shape, skin tone); change everything else: her black hair half twisted up after a bath, still damp, loose wet strands falling down her back and one shoulder. She is wearing a thin champagne satin camisole top with narrow straps and plain cotton shorts, a light blanket bunched over her legs. She sits sideways on the edge of the bed with her legs folded, leaning back against the wall, both hands raised gathering her hair up behind her head to tie it, elbows out, eyes half closed and away from the lens, a small tired smile. Place: a small Tokyo apartment bedroom at night, a bed against the wall, a nightstand with books and a mug, a laundry basket, a calendar on the wall, a charging cable across the floor. Expression: a playful slight pout. Light: one warm bedside lamp from the left, the right half of the frame in shadow, slightly yellow wall. Everyday and imperfect: a passer-by's shoulder cuts into the edge of the frame. Real skin with visible pores and small texture, light everyday makeup, no beauty retouching, no skin smoothing, no glow. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
+      "combo": {
+        "look": "g_look_bed",
+        "hairstyle": "g_after_bath",
+        "clothing": "g_satin_cami_shorts",
+        "shot": "g_bed_hair_tie",
+        "place": "g_apartment_bedroom",
+        "expression": "장난스럽게 삐죽",
+        "lighting": "침대 스탠드 조명",
+        "device": "아이폰 16 프로 3배 망원"
+      }
+    }
+  ]
+}

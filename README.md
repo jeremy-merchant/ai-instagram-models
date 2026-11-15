@@ -78,3 +78,12 @@ v2 12컷 중 **05·07·08·09·10·11·12 7컷을 폐기하고 다시 뽑았고,
 - **현실적 구도:** 식당에서 친구가 찍어준 컷(05) · 골목길 후면(10) · 구제숍 소품 구경(09) · 낮 공원 대화(08) · 지하철 대기(11) · 서점 잡지 코너(12).
 - 컨택트시트·컷별 프롬프트·검수 노트는 [`mio_feed_v2/README.md`](mio_feed_v2/README.md),
   풀 변경 내역은 [`prompt_randomizer/README.md`](prompt_randomizer/README.md) 참조.
+
+## 🌊 2026-11-16 v3 업데이트 — 3~4주차 바이럴·노출 8컷 + glamour 모드
+
+기운님 지시("그리고 그뒤에이제 노출있는것도 만들어주고")로 v2 일상 피드 뒤에 붙일 **노출·바이럴 구간 8컷**을 추가했습니다.
+
+- **[`mio_feed_v3/`](mio_feed_v3/)** — 풀빌라 수영장 · 필라테스 거울 셀카 · 호텔 가운 · 자취방 캐미솔 · 해질녘 해변 · 료칸 유카타 · 여름 도쿄 거리 · 리조트 선베드 (전 컷 1080×1350, 4:5).
+  컨택트시트 [`mio_feed_v3/mio_v3_grid.jpg`](mio_feed_v3/mio_v3_grid.jpg), 컷별 프롬프트·검수 노트·캡션·태그는 [`mio_feed_v3/README.md`](mio_feed_v3/README.md).
+- **생성기 확장:** `prompt_randomizer/generate_prompts.py --mode glamour` 추가. 옷과 장소가 강하게 묶인 노출 컷은 `pools.json`의 `glamour.looks` 단위로 짝지어 뽑고, `lingerie`·`underwear`·`topless` 등 12개 안전 금지어를 `--check`가 검사합니다.
+- **섀도우밴 안전선:** 8컷 모두 수영복·짐웨어·호텔/료칸/리조트 맥락. 업로드는 3일에 1장 이하, 태그는 여행·운동 카테고리만 사용.

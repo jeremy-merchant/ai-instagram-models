@@ -3,7 +3,7 @@
     "name": "Mio Daily Feed Prompt Pools",
     "model": "Mio (@_3io.log_) — 21, Tokyo, black hair, gray-tinted eyes, pale skin",
     "structure_credit": "Category-pool structure inspired by fairy-root/Flux-Prompt-Generator (MIT) — https://github.com/fairy-root/Flux-Prompt-Generator",
-    "revision": "v2.1 (2026-11-16) — AI 티 제거 · 최신 아이폰 스냅 스타일 · 현실적 일상 구도",
+    "revision": "v3 (2026-11-16) — glamour(노출·바이럴) 모드 추가",
     "updated": "2026-11-16",
     "revision_note_ko": "기운님 피드백 \"너무 ai 스럽거나 아이폰 너무예전꺼거나 구도자체가 ai 스러운거는 다시만들자\" 반영. AI 화보 키워드(시네마틱·골든아워 역광·보케·8k·masterpiece·perfect skin)를 풀에서 전면 삭제하고, 카메라는 최신 아이폰(15/16 Pro)만 남겼으며, 장소·구도 풀을 '친구가 그냥 찍어준 일상 스냅' 기준으로 다시 썼습니다.",
     "banned_keywords": [
@@ -24,7 +24,22 @@
       "doll"
     ],
     "mandatory_realism": "Real skin with visible pores and small texture, light everyday makeup, no beauty retouching, no skin smoothing, no glow.",
-    "mandatory_negative": "No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark."
+    "mandatory_negative": "No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark.",
+    "safety_banned_keywords": [
+      "lingerie",
+      "underwear",
+      "panties",
+      "topless",
+      "nude",
+      "naked",
+      "nipple",
+      "cleavage",
+      "erotic",
+      "seductive",
+      "bedroom eyes",
+      "lingerie set"
+    ],
+    "revision_note_v3_ko": "기운님 지시 \\\"노출있는것도 만들어주고\\\" 반영. 수영복·짐웨어·호텔/료칸/리조트 맥락 전용 풀과 --mode glamour 를 추가했습니다. 섀도우밴 회피를 위해 언더웨어/란제리·성인 화보 어휘는 safety_banned_keywords 로 검사합니다."
   },
   "no_face_scenes": [
     {
@@ -721,5 +736,381 @@
     "one corner is overexposed by a window or a lamp",
     "the phone was tilted and the verticals lean a little",
     "part of the table or a chair back blocks the bottom corner"
-  ]
+  ],
+  "glamour": {
+    "note_ko": "3~4주차 바이럴·노출 컷 전용 풀. 수영복·짐웨어·료칸·리조트 맥락 안에서만 노출을 다루고, 언더웨어/란제리·성인 화보 맥락은 쓰지 않습니다(섀도우밴 회피).",
+    "hairstyles": [
+      {
+        "id": "g_wet_back",
+        "ko": "물에 젖어 뒤로 넘긴 머리",
+        "en": "her long black hair soaking wet, pushed back off her face, damp strands stuck to her neck and shoulders, still dripping a little"
+      },
+      {
+        "id": "g_high_pony_wet",
+        "ko": "운동 후 높은 포니테일 (땀기)",
+        "en": "all of her black hair pulled up into one tight high ponytail at the crown, the nape of her neck bare, a few damp strands stuck to her temple"
+      },
+      {
+        "id": "g_low_bun_loose",
+        "ko": "느슨한 로우 번",
+        "en": "her black hair loosely gathered in a low bun at the nape of her neck, a few strands falling out, no bangs across the forehead"
+      },
+      {
+        "id": "g_claw_clip",
+        "ko": "집게핀 올림머리 (목욕 후)",
+        "en": "her black hair twisted up and clipped with a large plastic claw clip at the back of her head, the nape of her neck and ears bare, loose strands on her cheek"
+      },
+      {
+        "id": "g_center_part",
+        "ko": "앞머리 없는 센터 가르마",
+        "en": "her black hair parted in the middle with no bangs, straight and tucked behind both ears, a little shiny at the roots from the heat"
+      },
+      {
+        "id": "g_windblown",
+        "ko": "바람에 날리는 긴 머리",
+        "en": "her long black hair blowing across her face and over one shoulder in the wind, messy strands in front of her eyes"
+      },
+      {
+        "id": "g_after_bath",
+        "ko": "목욕 후 반쯤 묶은 젖은 머리",
+        "en": "her black hair half twisted up after a bath, still damp, loose wet strands falling down her back and one shoulder"
+      },
+      {
+        "id": "g_beach_waves",
+        "ko": "해변의 자연스러운 웨이브",
+        "en": "her black hair in loose salt-air waves, tucked behind one ear, the ends a little frizzy from the sea air"
+      }
+    ],
+    "clothing": [
+      {
+        "id": "g_ivory_bikini_towel",
+        "ko": "아이보리 투피스 수영복 + 허리 타월",
+        "en": "an ivory two-piece swimsuit under a white hotel beach towel wrapped around her waist, and a second thin towel hanging over one shoulder"
+      },
+      {
+        "id": "g_black_sports_set",
+        "ko": "블랙 스포츠 브라탑 + 하이웨이스트 레깅스",
+        "en": "a fitted black athletic crop top with thin straps and high-waisted charcoal leggings that come up over her waist, a thin sheen of sweat on her shoulders"
+      },
+      {
+        "id": "g_hotel_bathrobe",
+        "ko": "호텔 배스로브 (허리 느슨히)",
+        "en": "a thick white hotel bathrobe, loosely tied at the waist, the collar slipped off one shoulder, the sleeve pushed up, long enough to cover her to the knees"
+      },
+      {
+        "id": "g_satin_cami_shorts",
+        "ko": "샴페인 새틴 캐미솔 + 코튼 쇼츠",
+        "en": "a thin champagne satin camisole top with narrow straps and plain cotton shorts, a light blanket bunched over her legs"
+      },
+      {
+        "id": "g_cutout_onepiece_sheer",
+        "ko": "블랙 컷아웃 원피스 수영복 + 시스루 셔츠",
+        "en": "a black one-piece swimsuit with cut-out sides and a high neck, and over it a large sheer white cotton shirt hanging loose and open from both shoulders"
+      },
+      {
+        "id": "g_striped_yukata",
+        "ko": "남색 줄무늬 유카타 (느슨히)",
+        "en": "a simple navy-and-white thin-striped cotton yukata, loosely wrapped and tied at the waist with a plain soft obi, the collar sitting a little open at the neck, one shoulder slipping down"
+      },
+      {
+        "id": "g_crop_tank_lowrise",
+        "ko": "크롭 나시 + 로우라이즈 데님",
+        "en": "a tight ribbed white cropped tank top that ends above her waist and low-rise light-wash baggy jeans with a thin belt, white sneakers"
+      },
+      {
+        "id": "g_swim_top_shorts",
+        "ko": "블랙 수영복 상의 + 데님 쇼츠",
+        "en": "a simple black swimsuit top and light denim shorts, a loose striped cotton shirt bunched under her elbow, a thin gold anklet"
+      }
+    ],
+    "person_shots": [
+      {
+        "id": "g_pool_step_laugh",
+        "ko": "풀 계단에서 옆 사람 보며 웃는 컷",
+        "en": "She stands on the pool steps half turned towards the friend beside her who has just said something, head in profile, laughing openly, eyes squinting, not looking at the lens, one hand lifted in the middle of a gesture.",
+        "io": "out",
+        "place_ids": [
+          "g_pool_villa"
+        ]
+      },
+      {
+        "id": "g_gym_mirror",
+        "ko": "필라테스 전신거울 셀카",
+        "en": "She stands slightly sideways in the full-length mirror with one hip out, holding the phone at chest height in one hand, the other hand resting on her waist; in the mirror the back of the phone is clearly visible with three big round lenses in a triangle — the newest model, not an old single-lens phone.",
+        "io": "in",
+        "place_ids": [
+          "g_pilates_studio"
+        ],
+        "device_force": "ip16pro",
+        "phone_text": "The phone is a current iPhone 16 Pro in natural titanium: large square camera plate on the upper left with three big round lenses in a triangle, a small flash and a LiDAR dot."
+      },
+      {
+        "id": "g_hotel_window_coffee",
+        "ko": "호텔 침대에서 커피 들고 창밖 보기",
+        "en": "She sits on the edge of an unmade hotel bed with the duvet crumpled behind her, knees drawn up, both hands around a white ceramic cup of coffee, her head turned to look out of the tall window, a soft sleepy expression, not looking at the camera.",
+        "io": "in",
+        "place_ids": [
+          "g_hotel_room"
+        ]
+      },
+      {
+        "id": "g_bed_hair_tie",
+        "ko": "침대에서 머리 묶는 중 (야간 셀프타이머)",
+        "en": "She sits sideways on the edge of the bed with her legs folded, leaning back against the wall, both hands raised gathering her hair up behind her head to tie it, elbows out, eyes half closed and away from the lens, a small tired smile.",
+        "io": "in",
+        "place_ids": [
+          "g_apartment_bedroom"
+        ]
+      },
+      {
+        "id": "g_beach_walk_turn",
+        "ko": "해변을 걷다 뒤돌아보는 컷",
+        "en": "She is walking away along the wet sand and turning her head back towards the friend, half her face hidden in her hair, half smiling, one arm swinging mid-step.",
+        "io": "out",
+        "place_ids": [
+          "g_beach_dusk"
+        ]
+      },
+      {
+        "id": "g_ryokan_selfie",
+        "ko": "다다미방 셀카",
+        "en": "She sits on the floor with her legs folded to one side, holding the phone up with one hand at a slightly high angle, chin a bit low, smiling naturally at the screen, not posing, caught mid-expression.",
+        "io": "in",
+        "place_ids": [
+          "g_ryokan"
+        ]
+      },
+      {
+        "id": "g_street_walk",
+        "ko": "여름 거리를 걷다 옆을 보는 전신 스냅",
+        "en": "She is walking towards the camera but looking off to the side at a shop window, one hand pushing her hair back, the other holding a cold plastic bottle, body slightly off-centre in the frame.",
+        "io": "out",
+        "place_ids": [
+          "g_tokyo_street"
+        ]
+      },
+      {
+        "id": "g_sunbed_lie",
+        "ko": "선베드에 엎드려 음료 마시는 컷",
+        "en": "She lies on her stomach on a white sunbed, propped up on her elbows, holding a tall glass of iced drink with a paper straw near her mouth, taking a sip, sunglasses pushed up on top of her head, looking at the friend.",
+        "io": "out",
+        "place_ids": [
+          "g_resort_deck"
+        ]
+      }
+    ],
+    "places_person": [
+      {
+        "id": "g_pool_villa",
+        "ko": "오키나와 풀빌라 수영장",
+        "en": "the edge of a small private pool at a villa in Okinawa, bright choppy water, a faded plastic pool float drifting, a grey concrete wall and a strip of tropical leaves",
+        "io": "out",
+        "lights": [
+          {
+            "ko": "늦은 오후 강한 햇빛",
+            "en": "bright late-afternoon summer sun, hard shadows, ordinary contrast, the wall slightly overexposed"
+          },
+          {
+            "ko": "흐린 날 확산광",
+            "en": "flat overcast daylight, no sun flare, pale grey sky"
+          }
+        ]
+      },
+      {
+        "id": "g_pilates_studio",
+        "ko": "필라테스 스튜디오",
+        "en": "a small pilates studio after a class, wooden floor, a reformer machine at the edge, a grey wall with a hand-sanitizer bottle and a folded towel shelf",
+        "io": "in",
+        "lights": [
+          {
+            "ko": "천장 형광등",
+            "en": "ordinary overhead ceiling light, slightly green and uneven"
+          },
+          {
+            "ko": "낮 창가 빛",
+            "en": "flat daylight from a window, uneven exposure"
+          }
+        ]
+      },
+      {
+        "id": "g_hotel_room",
+        "ko": "호텔 객실 아침",
+        "en": "a hotel room in the morning, an unmade white bed, a half-open suitcase, a tall window with a grey city view",
+        "io": "in",
+        "lights": [
+          {
+            "ko": "흐린 아침 창빛",
+            "en": "flat pale morning light from the window, no sun, slightly overexposed at the glass"
+          }
+        ]
+      },
+      {
+        "id": "g_apartment_bedroom",
+        "ko": "도쿄 자취방 침실 (밤)",
+        "en": "a small Tokyo apartment bedroom at night, a bed against the wall, a nightstand with books and a mug, a laundry basket, a calendar on the wall, a charging cable across the floor",
+        "io": "in",
+        "lights": [
+          {
+            "ko": "침대 스탠드 조명",
+            "en": "one warm bedside lamp from the left, the right half of the frame in shadow, slightly yellow wall"
+          }
+        ]
+      },
+      {
+        "id": "g_beach_dusk",
+        "ko": "해질녘 오키나와 해변",
+        "en": "a flat Okinawa beach just before sunset, grey-blue sea, a thin band of pale orange at the horizon, two distant figures with a beach umbrella, wet sand mirroring the sky",
+        "io": "out",
+        "lights": [
+          {
+            "ko": "해질녘 낮은 빛",
+            "en": "low flat light, slightly cool, no warm golden glow, the sun already behind clouds"
+          }
+        ]
+      },
+      {
+        "id": "g_ryokan",
+        "ko": "료칸 다다미방",
+        "en": "a tatami room in a small Japanese ryokan in the evening, a low wooden table with a teapot and cups, a shoji door half open onto a dark garden, a folded futon in the corner",
+        "io": "in",
+        "lights": [
+          {
+            "ko": "종이등 불빛",
+            "en": "warm dim paper-lantern light, uneven, the corners of the room in shadow"
+          }
+        ]
+      },
+      {
+        "id": "g_tokyo_street",
+        "ko": "여름 도쿄 골목",
+        "en": "a narrow Tokyo lane on a hot summer day, a vending machine, potted plants outside a shop, a bicycle leaning on the wall, overhead cables, a few pedestrians far behind",
+        "io": "out",
+        "lights": [
+          {
+            "ko": "한낮 직사광",
+            "en": "harsh midday summer sun, hard shadows, the pavement bright and slightly blown out"
+          }
+        ]
+      },
+      {
+        "id": "g_resort_deck",
+        "ko": "리조트 풀 선베드",
+        "en": "a resort pool deck in Okinawa in the early afternoon, a white sunbed, a white umbrella, palm shadows on the concrete, another sunbed with a bag on it",
+        "io": "out",
+        "lights": [
+          {
+            "ko": "한낮 햇빛",
+            "en": "bright slightly harsh afternoon sun with hard shadows across the sunbed, a little overexposed at the top of the frame"
+          }
+        ]
+      }
+    ],
+    "looks": [
+      {
+        "id": "g_look_pool",
+        "ko": "풀빌라 수영장",
+        "shot": "g_pool_step_laugh",
+        "place": "g_pool_villa",
+        "clothing": [
+          "g_ivory_bikini_towel"
+        ],
+        "hairstyles": [
+          "g_wet_back",
+          "g_beach_waves"
+        ]
+      },
+      {
+        "id": "g_look_gym",
+        "ko": "필라테스 거울 셀카",
+        "shot": "g_gym_mirror",
+        "place": "g_pilates_studio",
+        "clothing": [
+          "g_black_sports_set"
+        ],
+        "hairstyles": [
+          "g_high_pony_wet"
+        ]
+      },
+      {
+        "id": "g_look_hotel",
+        "ko": "호텔 아침 가운",
+        "shot": "g_hotel_window_coffee",
+        "place": "g_hotel_room",
+        "clothing": [
+          "g_hotel_bathrobe"
+        ],
+        "hairstyles": [
+          "g_low_bun_loose",
+          "g_after_bath"
+        ]
+      },
+      {
+        "id": "g_look_bed",
+        "ko": "자취방 밤 캐미솔",
+        "shot": "g_bed_hair_tie",
+        "place": "g_apartment_bedroom",
+        "clothing": [
+          "g_satin_cami_shorts"
+        ],
+        "hairstyles": [
+          "g_after_bath",
+          "g_claw_clip",
+          "g_low_bun_loose"
+        ]
+      },
+      {
+        "id": "g_look_beach",
+        "ko": "해질녘 해변",
+        "shot": "g_beach_walk_turn",
+        "place": "g_beach_dusk",
+        "clothing": [
+          "g_cutout_onepiece_sheer"
+        ],
+        "hairstyles": [
+          "g_windblown",
+          "g_beach_waves"
+        ]
+      },
+      {
+        "id": "g_look_ryokan",
+        "ko": "료칸 유카타",
+        "shot": "g_ryokan_selfie",
+        "place": "g_ryokan",
+        "clothing": [
+          "g_striped_yukata"
+        ],
+        "hairstyles": [
+          "g_claw_clip",
+          "g_low_bun_loose"
+        ]
+      },
+      {
+        "id": "g_look_street",
+        "ko": "여름 도쿄 거리",
+        "shot": "g_street_walk",
+        "place": "g_tokyo_street",
+        "clothing": [
+          "g_crop_tank_lowrise"
+        ],
+        "hairstyles": [
+          "g_center_part",
+          "g_high_pony_wet"
+        ]
+      },
+      {
+        "id": "g_look_sunbed",
+        "ko": "리조트 선베드",
+        "shot": "g_sunbed_lie",
+        "place": "g_resort_deck",
+        "clothing": [
+          "g_swim_top_shorts"
+        ],
+        "hairstyles": [
+          "g_beach_waves",
+          "g_high_pony_wet"
+        ]
+      }
+    ],
+    "looks_note_ko": "노출 컷은 옷과 장소가 강하게 묶여 있어, glamour 모드는 '룩' 단위로 짝을 지어 뽑습니다(수영복이 필라테스 거울에 붙는 식의 모순 차단)."
+  }
 }

@@ -28,6 +28,7 @@ Usage
         --json out/prompts.json --markdown out/prompts.md
     python3 generate_prompts.py --check                # 생성 후 금지어 검사만
     python3 generate_prompts.py --list-seed 5          # show 5 different batches' fingerprints
+    python3 generate_prompts.py --mode glamour --person 8 --check   # v3 노출/바이럴 컷
 """
 
 import argparse
@@ -40,6 +41,8 @@ HERE = Path(__file__).resolve().parent
 POOLS = json.loads((HERE / "pools.json").read_text(encoding="utf-8"))
 META = POOLS.get("meta", {})
 BANNED = [k.lower() for k in META.get("banned_keywords", [])]
+SAFETY_BANNED = [k.lower() for k in META.get("safety_banned_keywords", [])]
+GLAMOUR = POOLS.get("glamour")
 
 NOFACE_TEMPLATE = (
     "A real amateur phone photo for an Instagram feed, taken on {device}. "
@@ -93,16 +96,29 @@ def pick_device(forced, rng):
     return rng.choice(devices)
 
 
-def build_batch(seed, noface, person):
+def build_batch(seed, noface, person, mode="daily"):
     rng = random.Random(seed)
     items = []
     imperfections = POOLS["imperfections"]
+    if mode == "glamour":
+        if not GLAMOUR:
+            raise SystemExit("pools.json has no 'glamour' section")
+        noface = 0
+        hairstyle_pool = GLAMOUR["hairstyles"]
+        clothing_pool = GLAMOUR["clothing"]
+        shot_pool = GLAMOUR["person_shots"]
+        place_pool = GLAMOUR["places_person"]
+    else:
+        hairstyle_pool = POOLS["hairstyles"]
+        clothing_pool = POOLS["clothing"]
+        shot_pool = POOLS["person_shots"]
+        place_pool = POOLS["places_person"]
 
     scenes = sample(POOLS["no_face_scenes"], noface, rng)
-    hairstyles = sample(POOLS["hairstyles"], person, rng)
-    clothes = sample(POOLS["clothing"], person, rng)
-    shots = sample(POOLS["person_shots"], person, rng)
-    places = sample(POOLS["places_person"], person, rng)
+    hairstyles = sample(hairstyle_pool, person, rng)
+    clothes = sample(clothing_pool, person, rng)
+    shots = sample(shot_pool, person, rng)
+    places = sample(place_pool, person, rng)
 
     for i, sc in enumerate(scenes, 1):
         dv = rng.choice(POOLS["devices"])
@@ -120,6 +136,39 @@ def build_batch(seed, noface, person):
             "combo": {"scene": sc["id"], "light": sc["light_ko"], "device": dv["ko"]},
         })
 
+    if mode == "glamour":
+        looks = sample(GLAMOUR["looks"], person, rng)
+        by = {k: {x["id"]: x for x in GLAMOUR[k]}
+              for k in ("hairstyles", "clothing", "person_shots", "places_person")}
+        used_hs = set()
+        for j, look in enumerate(looks):
+            options = [h for h in look["hairstyles"] if h not in used_hs] or look["hairstyles"]
+            hs = by["hairstyles"][rng.choice(options)]
+            used_hs.add(hs["id"])
+            cl = by["clothing"][rng.choice(look["clothing"])]
+            sh = by["person_shots"][look["shot"]]
+            pl = by["places_person"][look["place"]]
+            li = rng.choice(pl.get("lights") or POOLS["lighting"])
+            dv = pick_device(sh.get("device_force"), rng)
+            ex = rng.choice(POOLS["expressions"])
+            phone_text = (" " + sh["phone_text"]) if sh.get("phone_text") else ""
+            items.append({
+                "id": f"{j + 1:02d}",
+                "mode": "glamour",
+                "seed": seed,
+                "label_ko": f"{hs['ko']} · {cl['ko']} · {look['ko']}",
+                "prompt": PERSON_TEMPLATE.format(
+                    hairstyle=hs["en"], clothing=cl["en"], shot=sh["en"],
+                    phone_text=phone_text, place=pl["en"], expression=ex["en"],
+                    lighting=li["en"], device=dv["en"],
+                    imperfection=rng.choice(imperfections),
+                ),
+                "combo": {"look": look["id"], "hairstyle": hs["id"], "clothing": cl["id"],
+                          "shot": sh["id"], "place": pl["id"], "expression": ex["ko"],
+                          "lighting": li["ko"], "device": dv["ko"]},
+            })
+        return items
+
     for j in range(person):
         hs, cl, sh, pl = hairstyles[j], clothes[j], shots[j], places[j]
         # a shot that only makes sense in certain places (mirror selfie, table snap)
@@ -127,13 +176,13 @@ def build_batch(seed, noface, person):
         allowed = sh.get("place_ids")
         if allowed:
             taken = {x["id"] for x in places[:j]}
-            pool = [p for p in POOLS["places_person"]
+            pool = [p for p in place_pool
                     if p["id"] in allowed and p["id"] not in taken] or \
-                   [p for p in POOLS["places_person"] if p["id"] in allowed]
+                   [p for p in place_pool if p["id"] in allowed]
             pl = pool[j % len(pool)]
         elif sh.get("io") and pl.get("io") != sh["io"]:
             taken = {x["id"] for x in places[:j]}
-            pool = [p for p in POOLS["places_person"]
+            pool = [p for p in place_pool
                     if p.get("io") == sh["io"] and p["id"] not in taken]
             pl = (pool or places)[j % len(pool or places)]
 
@@ -184,6 +233,9 @@ def check_batch(items):
                 continue
             if word in low:
                 hits.append((it["id"], word))
+        for word in SAFETY_BANNED:
+            if word in low:
+                hits.append((it["id"], "safety:" + word))
     return hits
 
 
@@ -195,13 +247,15 @@ def main(argv=None):
     ap.add_argument("--count", type=int, help="total cuts (overrides --noface default ratio 1:2)")
     ap.add_argument("--json", dest="json_path", help="write the batch as JSON")
     ap.add_argument("--markdown", dest="md_path", help="write a prompt table as Markdown")
+    ap.add_argument("--mode", choices=["daily", "glamour"], default="daily",
+                    help="daily = 일상 피드, glamour = v3 노출/바이럴 컷 (수영복·짐웨어·료칸·리조트)")
     ap.add_argument("--check", action="store_true", help="after building, verify no banned keyword is present")
     ap.add_argument("--list-seed", type=int, help="print N batches' style fingerprints and exit")
     args = ap.parse_args(argv)
 
     if args.list_seed:
         for s in range(args.seed, args.seed + args.list_seed):
-            batch = build_batch(s, args.noface, args.person)
+            batch = build_batch(s, 0 if args.mode == "glamour" else args.noface, args.person, args.mode)
             tags = [b["combo"].get("hairstyle", b["combo"].get("scene")) for b in batch]
             print(f"seed {s}: " + ", ".join(tags))
         return 0
@@ -210,7 +264,15 @@ def main(argv=None):
         args.noface = round(args.count / 3)
         args.person = args.count - args.noface
 
-    batch = build_batch(args.seed, args.noface, args.person)
+    if args.mode == "glamour":
+        args.noface = 0
+    batch = build_batch(args.seed, args.noface, args.person, args.mode)
+    if args.mode == "glamour":
+        hp, cp = GLAMOUR["hairstyles"], GLAMOUR["clothing"]
+        sp, pp = GLAMOUR["person_shots"], GLAMOUR["places_person"]
+    else:
+        hp, cp = POOLS["hairstyles"], POOLS["clothing"]
+        sp, pp = POOLS["person_shots"], POOLS["places_person"]
 
     print(f"# Mio feed prompts — seed {args.seed} · {len(batch)} cuts "
           f"({args.noface} no-face / {args.person} person)\n")
@@ -223,7 +285,7 @@ def main(argv=None):
         if hits:
             print("banned keyword hits:", hits, file=sys.stderr)
             return 2
-        print(f"check: clean ({len(BANNED)} banned phrases scanned)")
+        print(f"check: clean ({len(BANNED)} AI-gloss phrases + {len(SAFETY_BANNED)} safety phrases scanned)")
 
     if args.json_path:
         p = Path(args.json_path)
@@ -244,10 +306,10 @@ def main(argv=None):
                              f"{c['device']} | {c['light']} | {b['seed']} |")
             else:
                 lines.append(
-                    f"| {b['id']} | 인물 | {_ko(POOLS['hairstyles'], c['hairstyle'])} | "
-                    f"{_ko(POOLS['clothing'], c['clothing'])} | "
-                    f"{_ko(POOLS['person_shots'], c['shot'])} | "
-                    f"{_ko(POOLS['places_person'], c['place'], key='ko')} | "
+                    f"| {b['id']} | 인물 | {_ko(hp, c['hairstyle'])} | "
+                    f"{_ko(cp, c['clothing'])} | "
+                    f"{_ko(sp, c['shot'])} | "
+                    f"{_ko(pp, c['place'], key='ko')} | "
                     f"{c['device']} | {c['lighting']} | {b['seed']} |")
         p.write_text("\n".join(lines) + "\n", encoding="utf-8")
         print(f"wrote {p}")

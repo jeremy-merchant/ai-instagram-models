@@ -18,6 +18,7 @@
 | `pools.json` | 미오 전용 카테고리 풀 (한국어 라벨 + 영어 프롬프트 조각 + 금지어 목록) |
 | `examples/seed_20261116.json` | v2.1 생성기로 뽑은 12컷 배치 (재현용) |
 | `examples/seed_20261116.md` | 같은 배치의 표 형식 요약 |
+| `examples/seed_20261116_glamour.json` / `.md` | v3 glamour 모드로 뽑은 8컷 배치 |
 
 ## v2.1에서 바뀐 것 (2026-11-16)
 
@@ -55,6 +56,26 @@
 6. **정면 응시 최소화** — 인물 구도 12종 중 정면 카메라 응시는 0종. 시선이 접시·폰·친구·진열대로 향합니다.
 7. **얼굴만 유지** — 프롬프트 끝에 `Do not reproduce the reference pose, outfit, hairstyle or background.` 를 붙여 레퍼런스의 시스루 뱅·오프숄더 니트가 따라오지 않게 합니다.
 
+## v3 glamour 모드 (2026-11-16)
+
+노출·바이럴 컷 전용 모드입니다. 수영복·짐웨어·호텔/료칸/리조트 맥락 안에서만 노출을 다루고, 언더웨어·란제리 맥락은 쓰지 않습니다.
+
+- **`--mode glamour`** — `pools.json`의 `glamour` 섹션(헤어 8 · 의상 8 · 구도 8 · 장소 8 · **룩 8**)에서 뽑습니다.
+- **룩(look) 단위 추출** — 옷과 장소가 강하게 묶여 있어 `glamour.looks`가 `shot`·`place`·`clothing`·`hairstyles` id를 한 묶음으로 정의합니다. 수영복이 필라테스 거울에 붙는 식의 모순이 구조적으로 차단됩니다.
+- **안전 검사** — `meta.safety_banned_keywords` 12개(`lingerie`·`underwear`·`panties`·`topless`·`nude`·`naked`·`nipple`·`cleavage`·`erotic`·`seductive`·`bedroom eyes`·`lingerie set`)를 `--check`가 함께 스캔하고, 하나라도 걸리면 exit 2.
+- **새 룩 추가** — `pools.json`의 `glamour.looks`에 한 줄 넣으면 됩니다:
+
+```json
+{ "id": "g_look_pool_night", "ko": "야간 풀", "shot": "g_pool_step_laugh", "place": "g_pool_villa",
+  "clothing": ["g_ivory_bikini_towel"], "hairstyles": ["g_wet_back"] }
+```
+
+```bash
+python3 generate_prompts.py --mode glamour --person 8 --check \
+    --json examples/seed_20261116_glamour.json --markdown examples/seed_20261116_glamour.md
+# → check: clean (15 AI-gloss phrases + 12 safety phrases scanned)
+```
+
 ## 사용법
 
 ```bash
@@ -82,7 +103,7 @@ python3 generate_prompts.py --list-seed 5
 ```
 
 ```
-check: clean (15 banned phrases scanned)
+check: clean (15 AI-gloss phrases + 12 safety phrases scanned)
 ```
 
 ## 이미지 생성으로 이어 붙이기
