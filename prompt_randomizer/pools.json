@@ -3,76 +3,97 @@
     "name": "Mio Daily Feed Prompt Pools",
     "model": "Mio (@_3io.log_) — 21, Tokyo, black hair, gray-tinted eyes, pale skin",
     "structure_credit": "Category-pool structure inspired by fairy-root/Flux-Prompt-Generator (MIT) — https://github.com/fairy-root/Flux-Prompt-Generator",
-    "updated": "2026-11-16"
+    "revision": "v2.1 (2026-11-16) — AI 티 제거 · 최신 아이폰 스냅 스타일 · 현실적 일상 구도",
+    "updated": "2026-11-16",
+    "revision_note_ko": "기운님 피드백 \"너무 ai 스럽거나 아이폰 너무예전꺼거나 구도자체가 ai 스러운거는 다시만들자\" 반영. AI 화보 키워드(시네마틱·골든아워 역광·보케·8k·masterpiece·perfect skin)를 풀에서 전면 삭제하고, 카메라는 최신 아이폰(15/16 Pro)만 남겼으며, 장소·구도 풀을 '친구가 그냥 찍어준 일상 스냅' 기준으로 다시 썼습니다.",
+    "banned_keywords": [
+      "cinematic",
+      "golden hour",
+      "bokeh",
+      "8k",
+      "4k",
+      "masterpiece",
+      "perfect skin",
+      "hyperrealistic",
+      "studio lighting",
+      "beauty retouch",
+      "point-and-shoot",
+      "polaroid",
+      "film border",
+      "glossy skin",
+      "doll"
+    ],
+    "mandatory_realism": "Real skin with visible pores and small texture, light everyday makeup, no beauty retouching, no skin smoothing, no glow.",
+    "mandatory_negative": "No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark."
   },
   "no_face_scenes": [
     {
       "id": "cafe_latte_table",
       "ko": "도쿄 카페 테이블, 라떼와 크루아상 (손만)",
-      "en": "a small Tokyo cafe table by the window, a half-finished latte with delicate foam art and a flaky croissant on a ceramic plate, one hand holding the cup, no face in frame",
+      "en": "a small Tokyo cafe table by the window, a half-finished latte and a flaky croissant on a ceramic plate, one hand holding the cup, no face in frame",
       "light_ko": "오후 창가 자연광",
-      "light_en": "soft afternoon window light, low contrast"
+      "light_en": "flat afternoon daylight from the window"
     },
     {
       "id": "morning_window_desk",
       "ko": "아침 창가 책상, 커피와 펼친 책 (손끝만)",
-      "en": "a quiet morning desk beside a sunlit window, a ceramic mug of black coffee, an open paperback with a bookmark, a small plant and a linen pouch, only a fingertips edge of the hand visible, no face",
-      "light_ko": "아침 창가 햇살",
-      "light_en": "bright morning sunlight through a window, warm highlights"
+      "en": "a quiet morning desk beside a window, a ceramic mug of black coffee, an open paperback with a bookmark, a small plant and a linen pouch, only the edge of a hand visible, no face",
+      "light_ko": "아침 창가 빛",
+      "light_en": "plain morning daylight, slightly cool"
     },
     {
       "id": "tokyo_alley_night",
       "ko": "밤의 도쿄 골목과 자판기",
-      "en": "a narrow Tokyo backstreet at night, a glowing red vending machine, wet asphalt reflections, tangled power lines overhead, no people, no face",
+      "en": "a narrow Tokyo backstreet at night, a glowing vending machine, wet asphalt, tangled power lines overhead, no people, no face",
       "light_ko": "밤 자판기 불빛",
-      "light_en": "night, lit by the vending machine's glow and a distant street lamp"
+      "light_en": "night, lit only by the vending machine and a distant street lamp"
     },
     {
       "id": "train_platform_morning",
-      "ko": "아침 전철 플랫폼, 창밖으로 지나가는 열차",
-      "en": "a suburban Tokyo train platform in early morning light, empty bench, a passing train blurred through the window glass, no people's faces",
+      "ko": "아침 전철 플랫폼, 벤치와 지나가는 열차",
+      "en": "a suburban Tokyo train platform in the morning, an empty bench, a train passing blurred behind the glass, no people's faces",
       "light_ko": "이른 아침 확산광",
       "light_en": "pale early-morning daylight, slightly hazy"
     },
     {
       "id": "train_window_scenery",
       "ko": "전철 창밖 풍경과 이어폰 (무릎 위)",
-      "en": "view from a train seat, white earphone cable resting on a denim lap, the city and rice-field scenery passing outside the window, no face",
+      "en": "view from a train seat, white earphone cable resting on a denim lap, the city passing outside the window, no face",
       "light_ko": "흐린 날 차창 빛",
       "light_en": "flat overcast daylight through the train window"
     },
     {
       "id": "grocery_basket",
       "ko": "마트 장바구니와 장본 것들 (손만)",
-      "en": "a hand carrying a folded canvas tote full of groceries — milk carton, green onions, a pack of eggs — inside a small neighborhood supermarket, no face",
+      "en": "a hand carrying a folded canvas tote full of groceries inside a small neighborhood supermarket, no face",
       "light_ko": "마트 형광등",
       "light_en": "cool fluorescent supermarket lighting"
     },
     {
       "id": "shoes_ootd_sidewalk",
       "ko": "보도블록 위 신발 클로즈업 OOTD",
-      "en": "close-up of white low-top sneakers and cropped wide trousers standing on a Japanese sidewalk tile with fallen ginkgo leaves, shot from above, no face, no upper body",
+      "en": "close-up of white sneakers and cropped wide trousers standing on a Japanese sidewalk tile with fallen ginkgo leaves, shot from above, no face, no upper body",
       "light_ko": "오후 확산광",
       "light_en": "soft overcast afternoon light, mild shadow"
     },
     {
       "id": "bookshelf_closeup",
       "ko": "서점 서가 클로즈업, 책등과 손끝",
-      "en": "close-up of a bookstore shelf in Tokyo, colorful spines, a hand pulling out one novel, warm shop lighting, no face",
+      "en": "close-up of a bookstore shelf in Tokyo, spines of used books, a hand pulling out one novel, no face",
       "light_ko": "서점 실내 조명",
       "light_en": "warm indoor bookstore lighting"
     },
     {
       "id": "konbini_snack_shelf",
       "ko": "편의점 과자 진열대와 바구니",
-      "en": "a convenience store aisle in Japan, a small shopping basket holding onigiri and a canned coffee, fluorescent ceiling light, no face, no people",
+      "en": "a convenience store aisle in Japan, a small basket holding onigiri and a canned coffee, no face, no people",
       "light_ko": "편의점 형광등",
       "light_en": "cool fluorescent convenience-store lighting"
     },
     {
       "id": "laundry_room",
       "ko": "동전 세탁소, 돌아가는 세탁기",
-      "en": "a small Japanese coin laundry at dusk, two front-loading washing machines mid-cycle with clothes tumbling inside, plastic chair, no people, no face",
+      "en": "a small Japanese coin laundry at dusk, two front-loading washing machines mid-cycle, a plastic chair, no people, no face",
       "light_ko": "해질녘 실내 조명",
       "light_en": "dusk light mixed with the laundry's fluorescent tubes"
     },
@@ -86,85 +107,94 @@
     {
       "id": "bed_foot_book",
       "ko": "침대 발치, 이불과 책과 발끝",
-      "en": "the foot of a rumpled white bed, an open book face-down on the blanket, one bare foot peeking from the duvet, soft morning light, no face",
-      "light_ko": "아침 창가 햇살",
-      "light_en": "soft morning window light on white bedding"
+      "en": "the foot of a rumpled white bed, an open book face-down on the blanket, one bare foot peeking from the duvet, no face",
+      "light_ko": "아침 창가 빛",
+      "light_en": "plain morning window light on white bedding"
     },
     {
       "id": "dessert_plate_overhead",
       "ko": "오버헤드 디저트 플레이트, 말차와 단팥",
-      "en": "overhead shot of a matcha parfait and a small plate of dorayaki on a wooden cafe table, condensation on the iced glass, no face, no people",
+      "en": "overhead shot of a matcha parfait and a small plate of dorayaki on a wooden cafe table, condensation on the glass, no face, no people",
       "light_ko": "카페 실내 조명",
-      "light_en": "warm cafe indoor lighting"
+      "light_en": "ordinary cafe indoor lighting"
     },
     {
       "id": "bicycle_morning_street",
       "ko": "아침 주택가 골목의 자전거",
-      "en": "a vintage city bicycle parked against a low concrete wall on a quiet Tokyo residential street in the morning, potted plants, no people, no face",
+      "en": "a city bicycle parked against a low concrete wall on a quiet Tokyo residential street in the morning, potted plants, no people, no face",
       "light_ko": "아침 자연광",
-      "light_en": "clean morning daylight, long soft shadows"
+      "light_en": "plain morning daylight, soft shadows"
+    },
+    {
+      "id": "diner_table_setting",
+      "ko": "동네 식당 테이블, 반찬과 물컵",
+      "en": "a worn wooden table in a small Tokyo diner, a half-eaten plate of grilled fish and rice, a water glass, a plastic container lid, chairs pushed back, no face",
+      "light_ko": "식당 형광등 + 창가 빛",
+      "light_en": "one fluorescent tube overhead plus flat daylight from the window"
+    },
+    {
+      "id": "convenience_counter_receipt",
+      "ko": "편의점 계산대 위 영수증과 커피",
+      "en": "a convenience store counter with a paper receipt, a hot canned coffee and a hand reaching for it, no face",
+      "light_ko": "편의점 형광등",
+      "light_en": "cool fluorescent convenience-store lighting"
     }
   ],
   "hairstyles": [
     {
       "id": "center_part_no_bangs",
       "ko": "앞머리 없는 센터 가르마 흑발",
-      "en": "long jet-black hair parted cleanly in the middle with NO bangs, tucked behind both ears, forehead fully exposed"
+      "en": "long black hair parted in the middle with no fringe, both sides tucked behind the ears, forehead bare"
     },
     {
       "id": "side_swept",
       "ko": "옆으로 넘긴 사이드 스웹트 앞머리",
-      "en": "black hair swept to one side in a soft side-part, long side-swept bangs across the forehead to the temple"
+      "en": "black hair in a soft side part, long side-swept bangs across the forehead"
     },
     {
       "id": "high_ponytail",
       "ko": "높은 포니테일",
-      "en": "sleek high ponytail tied at the crown of the head, baby hairs framing the temples, neck and ears fully visible"
+      "en": "all of her black hair gathered into one high ponytail at the crown, the nape and ears bare"
     },
     {
       "id": "low_loose_bun",
       "ko": "느슨한 로우 번 (똥머리)",
-      "en": "loose low bun at the nape of the neck, a few soft strands falling out around the face and ears"
+      "en": "black hair gathered into a loose bun low at the nape of the neck, ears and neck visible, a few strands loose at the temples"
     },
     {
       "id": "half_up",
       "ko": "반묶음 (앞머리 올려 묶은 하프업)",
-      "en": "half-up half-down hairstyle, top section gathered with a tortoiseshell claw clip, forehead and face fully visible"
+      "en": "hair half up, the top section held by a tortoiseshell claw clip, the rest falling over the shoulders"
     },
     {
       "id": "natural_waves",
       "ko": "자연스러운 웨이브, 앞머리 옆으로",
-      "en": "loose natural waves falling past the shoulders, no straight bangs, hair parted and pushed back from the forehead"
+      "en": "loose natural waves falling past the shoulders, no fringe, hair pushed back from the forehead"
     },
     {
       "id": "beanie",
       "ko": "니트 비니 착용",
-      "en": "a soft ribbed knit beanie pulled down low over the head, a few strands of black hair escaping at the temples"
+      "en": "a ribbed knit beanie pulled down over her head, a few black strands escaping at the temples"
     },
     {
       "id": "beret",
       "ko": "베레모 착용",
-      "en": "a black wool beret tilted slightly to one side, black hair loose and tucked behind one ear"
+      "en": "a black wool beret tilted to one side, black hair loose and tucked behind one ear"
     },
     {
       "id": "messy_bedhead_updo",
       "ko": "대충 집게핀으로 올린 헝클어진 머리",
-      "en": "hair carelessly twisted up and pinned with a clip, messy strands falling around the face and neck"
+      "en": "hair carelessly twisted up and clipped, messy strands falling around the face and neck"
     },
     {
       "id": "side_braid",
       "ko": "옆으로 땋은 사이드 브레이드",
-      "en": "a loose side braid over one shoulder, the front section pulled back smoothly with no fringe"
-    },
-    {
-      "id": "twin_braids",
-      "ko": "양갈래로 땋은 머리",
-      "en": "two loose twin braids, front hair pulled back away from the forehead"
+      "en": "a loose side braid over one shoulder, the front pulled back smoothly with no fringe"
     },
     {
       "id": "short_bob_wig",
       "ko": "단발 보브로 바꾼 날",
-      "en": "chin-length short bob haircut, middle part, ends curling slightly inward"
+      "en": "a chin-length black bob, middle part, ends turned slightly inward"
     },
     {
       "id": "baseball_cap",
@@ -174,24 +204,29 @@
     {
       "id": "claw_clip_back",
       "ko": "집게핀으로 반만 집어올린 머리",
-      "en": "front section of black hair pinned back with a claw clip above the ears, the rest of the hair long and straight"
+      "en": "the front of her black hair pinned back with a claw clip above the ears, the rest long and straight"
+    },
+    {
+      "id": "wet_after_shower",
+      "ko": "샤워 후 물기 있는 머리",
+      "en": "damp hair pushed back from the face after a shower, a few strands stuck to her cheek"
     }
   ],
   "clothing": [
     {
       "id": "oversize_hoodie_joggers",
       "ko": "오버사이즈 그레이 후드티 + 조거팬츠",
-      "en": "an oversized heather-grey hoodie with the sleeves pushed to the elbows, paired with relaxed grey joggers"
+      "en": "an oversized heather-grey hoodie with the sleeves pushed to the elbows and relaxed grey joggers"
     },
     {
       "id": "striped_oxford",
       "ko": "스트라이프 옥스포드 셔츠 (허리 묶음)",
-      "en": "a loose blue-and-white striped oxford shirt with the sleeves rolled up, the hem knotted at the waist over straight jeans"
+      "en": "a loose blue-and-white striped oxford shirt with the sleeves rolled up, the front tucked loosely into straight jeans"
     },
     {
       "id": "beige_trench",
       "ko": "베이지 트렌치코트",
-      "en": "a long beige cotton trench coat over a fine cream turtleneck and dark straight trousers"
+      "en": "a long beige cotton trench coat over a cream turtleneck and dark straight trousers"
     },
     {
       "id": "denim_jacket",
@@ -201,7 +236,7 @@
     {
       "id": "floral_dress",
       "ko": "플로럴 원피스 + 가디건",
-      "en": "a small-print floral long-sleeve dress in muted sage, with a thin knit cardigan slipping off one shoulder"
+      "en": "a small-print floral long-sleeve dress with a thin knit cardigan open over it"
     },
     {
       "id": "black_leather_jacket",
@@ -211,116 +246,172 @@
     {
       "id": "pajama_homewear",
       "ko": "루즈핏 파자마 홈웨어",
-      "en": "loose cotton pajamas in pale blue gingham, one sleeve slipping down, bare feet"
+      "en": "loose cotton pajamas in pale blue gingham, one sleeve slipping down"
     },
     {
       "id": "cardigan_long_skirt",
       "ko": "가디건 + 롱 스커트",
-      "en": "a chunky oatmeal cardigan hanging open over a ribbed top and a long pleated charcoal skirt"
+      "en": "a chunky oatmeal cardigan open over a ribbed top and a long pleated charcoal skirt"
     },
     {
       "id": "knit_sweater_wide_denim",
       "ko": "오트밀 니트 + 와이드 연청",
-      "en": "a soft oatmeal crew-neck knit sweater, sleeves over the hands, with wide-leg light denim and white sneakers"
+      "en": "a soft oatmeal crew-neck knit with the sleeves pulled over her hands and wide-leg light denim"
     },
     {
       "id": "tracksuit",
       "ko": "트레이닝 세트 + 스니커즈",
-      "en": "a matching navy tracksuit set with white piping, zip jacket half open over a white tank"
+      "en": "a navy tracksuit jacket half zipped over a white tank and matching joggers"
     },
     {
       "id": "turtleneck_coat",
       "ko": "블랙 터틀넥 + 울 코트",
-      "en": "a black fine-gauge turtleneck under an oversized grey wool coat, hands deep in the pockets"
+      "en": "a black fine-gauge turtleneck under a grey wool coat, a scarf loose at her neck"
     },
     {
       "id": "linen_shirt_shorts",
       "ko": "린넨 셔츠 + 반바지 (집 앞)",
-      "en": "a loose white linen shirt unbuttoned over a tank, with soft grey shorts, barefoot in socks"
+      "en": "a loose white linen shirt open over a tank and soft grey shorts"
     },
     {
       "id": "varsity_jacket",
       "ko": "바시티 자켓 + 미니스커트",
-      "en": "a cream-and-black varsity jacket over a cropped tee and a plaid mini skirt, thigh socks"
+      "en": "a cream-and-black varsity jacket over a cropped tee and a plaid mini skirt"
     },
     {
       "id": "muscle_tee_cargo",
       "ko": "머슬 티 + 카고 팬츠",
-      "en": "a washed grey muscle tee tucked into olive cargo pants with a canvas belt"
+      "en": "a washed grey muscle tee tucked into olive cargo pants"
     }
   ],
   "person_shots": [
     {
-      "id": "profile_side",
-      "ko": "옆모습 90도 프로필",
-      "en": "a clean 90-degree side profile shot, nose and jawline in silhouette, not looking at the camera",
-      "io": null
+      "id": "friend_across_table",
+      "ko": "친구가 식탁 맞은편에서 찍어준 컷",
+      "en": "The photo was taken by the friend sitting across the table, one-handed; she is in the middle of a sentence, eyes on her friend or on her food, not on the lens.",
+      "io": "in",
+      "place_ids": [
+        "diner_table",
+        "cafe_window_seat",
+        "her_kitchen"
+      ]
     },
     {
-      "id": "back_turned_glance",
-      "ko": "뒷모습에서 살짝 돌아보는 컷",
-      "en": "seen from behind, body turned away, head half-turned back over the shoulder",
-      "io": null
+      "id": "eating_bite",
+      "ko": "한 입 먹기 직전, 시선은 접시로",
+      "en": "Caught just before a bite, chopsticks or a fork in her hand, her eyes down on the plate.",
+      "io": "in",
+      "place_ids": [
+        "diner_table",
+        "cafe_window_seat",
+        "her_kitchen"
+      ]
     },
     {
-      "id": "mirror_phone_face_half",
-      "ko": "거울 셀카, 폰으로 얼굴 반쯤 가림",
-      "en": "a mirror selfie taken with an iPhone held in front of the face, covering the lower half of the face, the other hand in a pocket",
-      "io": "in"
+      "id": "walking_pause",
+      "ko": "걸어가다 잠깐 멈춘 순간",
+      "en": "She has stopped mid-step while walking and turned her head slightly, a small bag in one hand, one foot still lifting.",
+      "io": "out",
+      "place_ids": [
+        "tokyo_alley_walk",
+        "crosswalk",
+        "konbini_front"
+      ]
     },
     {
-      "id": "candid_far_snap",
-      "ko": "친구가 멀리서 찍은 스냅",
-      "en": "a candid snap taken from a few meters away by a friend, subject unaware, slightly off-center in the frame",
-      "io": null
+      "id": "back_walking_away",
+      "ko": "골목을 걸어가는 뒷모습 (3/4 후면)",
+      "en": "Seen from behind at a slight angle as she walks away, one foot mid-step, head turned a little to the left.",
+      "io": "out",
+      "place_ids": [
+        "tokyo_alley_walk",
+        "crosswalk"
+      ]
     },
     {
-      "id": "looking_down_book",
-      "ko": "책 보며 고개 숙인 컷",
-      "en": "head lowered, eyes on an open book in her hands, gaze completely off-camera",
-      "io": null
+      "id": "mirror_selfie_current_iphone",
+      "ko": "거울 셀카, 최신 아이폰(3구 카메라) 노출",
+      "en": "A mirror selfie she took herself, standing off-centre, the phone held at chest height so it covers her chin and mouth; in the mirror the back of the phone is visible.",
+      "io": "in",
+      "device_force": "iphone_current_pro",
+      "phone_text": "The phone in her hand is a current iPhone Pro: a large square camera plate on the upper left with three big lenses in a triangle plus a small flash, natural titanium or white titanium body, clearly the newest model and not an older iPhone.",
+      "place_ids": [
+        "elevator_mirror",
+        "her_kitchen",
+        "vintage_shop"
+      ]
     },
     {
-      "id": "eating_first_bite",
-      "ko": "음식 먹기 직전, 시선은 접시로",
-      "en": "about to take the first bite, chopsticks lifted, eyes cast down toward the plate instead of the lens",
-      "io": "in"
+      "id": "browsing_shelf",
+      "ko": "진열대·매장에서 물건 고르는 중",
+      "en": "She stands at a display holding an item up to look at it, head slightly bowed, seen from two metres away at an angle.",
+      "io": "in",
+      "place_ids": [
+        "vintage_shop",
+        "bookstore_magazine_corner",
+        "record_shop"
+      ]
     },
     {
-      "id": "walking_away_street",
-      "ko": "골목을 걸어가는 뒷모습 전신",
-      "en": "full body walking away down a narrow street, one foot mid-step, back to the camera",
-      "io": "out"
+      "id": "waiting_bench",
+      "ko": "벤치·플랫폼에 앉아 기다리는 옆모습",
+      "en": "She sits waiting on a bench, leaning forward a little, a bag on her lap, looking down at her phone, seen from the side by whoever sits next to her.",
+      "io": "in",
+      "place_ids": [
+        "subway_platform_bench",
+        "train_seat",
+        "park_bench_day"
+      ]
     },
     {
-      "id": "window_gaze_out",
-      "ko": "창밖을 보는 옆얼굴",
-      "en": "seated by the window, chin resting on her hand, watching the city outside instead of the camera",
-      "io": "in"
+      "id": "phone_in_hand",
+      "ko": "폰 보는 옆모습",
+      "en": "She is looking down at the phone in her hand, chin tucked, completely unaware of the camera.",
+      "io": null,
+      "place_ids": null
     },
     {
       "id": "over_shoulder_closeup",
       "ko": "어깨 너머로 부르는 듯한 클로즈업",
-      "en": "over-the-shoulder close-up, only part of the face visible in three-quarter rear angle",
-      "io": null
+      "en": "She has just turned her head back over her shoulder because the friend called her name; only three-quarters of her face is visible.",
+      "io": null,
+      "place_ids": [
+        "konbini_front",
+        "tokyo_alley_walk",
+        "crosswalk"
+      ]
     },
     {
-      "id": "laundry_looking_up",
-      "ko": "세탁기 앞에서 고개 든 순간",
-      "en": "crouching in front of the washing machine, caught just as she looks up",
-      "io": "in"
+      "id": "candid_far_snap",
+      "ko": "친구가 멀리서 찍은 스냅",
+      "en": "A candid snap taken from a few metres away by a friend, she is not aware of it and sits off-centre in the frame.",
+      "io": null,
+      "place_ids": [
+        "park_bench_day",
+        "crosswalk",
+        "tokyo_alley_walk"
+      ]
+    },
+    {
+      "id": "sitting_by_window",
+      "ko": "창가 자리에 앉아 바깥 보는 옆얼굴",
+      "en": "She sits by the window with a drink, chin propped on one hand, looking at the street outside rather than the camera.",
+      "io": "in",
+      "place_ids": [
+        "cafe_window_seat",
+        "train_seat",
+        "her_kitchen"
+      ]
     },
     {
       "id": "getting_on_bike",
       "ko": "자전거에 오르는 중간 동작",
-      "en": "mid-motion swinging one leg over a city bicycle, body angled away",
-      "io": "out"
-    },
-    {
-      "id": "hair_tying",
-      "ko": "머리 묶는 중, 팔 올린 자세",
-      "en": "both arms lifted tying her hair up, face partly hidden by her own arm",
-      "io": null
+      "en": "Mid-motion swinging one leg over a city bicycle, body angled away.",
+      "io": "out",
+      "place_ids": [
+        "park_bench_day",
+        "tokyo_alley_walk"
+      ]
     }
   ],
   "expressions": [
@@ -349,79 +440,151 @@
       "en": "a playful slight pout"
     },
     {
-      "ko": "입 벌려 웃는 자연스러운 웃음",
-      "en": "an unguarded open laugh"
+      "ko": "말하다 만 자연스러운 입 모양",
+      "en": "her mouth half open in the middle of speaking"
     }
   ],
   "places_person": [
     {
-      "ko": "도쿄 주택가 골목",
-      "en": "a quiet residential alley in Tokyo with low walls and potted plants",
-      "id": "tokyo_alley",
-      "io": "out",
+      "id": "diner_table",
+      "ko": "동네 정식당·브런치 카페 테이블",
+      "en": "a small neighborhood diner in Tokyo, worn wooden table, plates and a water glass between her and the friend",
+      "io": "in",
       "lights": [
         {
-          "ko": "골든아워",
-          "en": "warm golden hour sunlight"
+          "ko": "식당 형광등 + 창가 빛",
+          "en": "one fluorescent tube overhead plus flat daylight from the window"
         },
         {
-          "ko": "흐린 날 확산광",
-          "en": "flat diffused overcast daylight"
+          "ko": "실내 일반 조명",
+          "en": "ordinary indoor lighting, slightly uneven"
         }
       ]
     },
     {
-      "ko": "동네 카페 창가 자리",
-      "en": "a window seat of a small neighborhood cafe",
       "id": "cafe_window_seat",
+      "ko": "동네 카페 창가 자리",
+      "en": "a window seat of a small neighborhood cafe, cups on the table, the street behind the glass",
       "io": "in",
       "lights": [
         {
           "ko": "창가 자연광",
-          "en": "soft natural window light"
+          "en": "plain daylight from the window"
         },
         {
-          "ko": "오후 햇살",
-          "en": "warm afternoon sunlight through the glass"
+          "ko": "카페 실내 조명",
+          "en": "ordinary cafe lighting mixed with daylight"
         }
       ]
     },
     {
-      "ko": "전철 안 좌석",
-      "en": "a seat on a Tokyo commuter train",
-      "id": "train_seat",
+      "id": "park_bench_day",
+      "ko": "낮 시간대 도쿄 공원 벤치",
+      "en": "a slatted wooden bench in a Tokyo park, a low hedge and a bicycle behind her, people walking far down the path",
+      "io": "out",
+      "lights": [
+        {
+          "ko": "흐린 날 확산광",
+          "en": "flat overcast daylight, no sun"
+        },
+        {
+          "ko": "가을 오후 확산광",
+          "en": "soft autumn afternoon daylight through bare trees"
+        }
+      ]
+    },
+    {
+      "id": "vintage_shop",
+      "ko": "구제숍·잡화점 진열대 앞",
+      "en": "a cramped second-hand clothing and accessory shop in Shimokitazawa, racks of clothes, a price board, boxes on the floor",
       "io": "in",
       "lights": [
         {
-          "ko": "차창 확산광",
-          "en": "flat diffused daylight from the train window"
+          "ko": "형광등 + 백열전구",
+          "en": "a fluorescent tube plus one warm bulb, slightly green"
         },
         {
-          "ko": "새벽 푸른 빛",
-          "en": "cold blue early-morning light"
+          "ko": "가게 실내 조명",
+          "en": "plain shop lighting, uneven"
         }
       ]
     },
     {
-      "ko": "자취방 침대",
-      "en": "her own small bedroom, on the bed under a rumpled duvet",
-      "id": "bedroom_bed",
+      "id": "subway_platform_bench",
+      "ko": "지하철 플랫폼 벤치",
+      "en": "a bench on a Tokyo subway platform, tiled pillar behind her, a departure board and one other passenger waiting",
       "io": "in",
       "lights": [
         {
-          "ko": "아침 창가 햇살",
-          "en": "soft morning window light on white bedding"
+          "ko": "지하철 형광등",
+          "en": "flat fluorescent platform light, cool white"
         },
         {
-          "ko": "밤 스탠드 조명",
-          "en": "dim warm bedside lamp light at night"
+          "ko": "플랫폼 형광등 + 어두운 승강장 끝",
+          "en": "fluorescent platform light with the dark far end of the platform"
         }
       ]
     },
     {
-      "ko": "동전 세탁소",
-      "en": "a coin laundry down the street",
+      "id": "elevator_mirror",
+      "ko": "자취방 엘리베이터 거울",
+      "en": "the full-length mirror inside a small apartment elevator, metal doors and a paper shopping bag at the edge of the frame",
+      "io": "in",
+      "lights": [
+        {
+          "ko": "엘리베이터 천장 조명",
+          "en": "flat ceiling panel light, slightly green and uneven"
+        }
+      ]
+    },
+    {
+      "id": "bookstore_magazine_corner",
+      "ko": "서점 잡지·아트북 코너",
+      "en": "a second-hand bookstore in Tokyo, tall wooden shelves of art books and magazines, paper labels sticking out, stacks on the floor, an aluminium step ladder",
+      "io": "in",
+      "lights": [
+        {
+          "ko": "서점 형광등 + 백열전구",
+          "en": "a fluorescent tube plus a warm bulb, slightly yellow"
+        }
+      ]
+    },
+    {
+      "id": "tokyo_alley_walk",
+      "ko": "도쿄 주택가 골목길",
+      "en": "a narrow residential street in Tokyo with parked bicycles, potted plants, a vending machine and tangled power lines",
+      "io": "out",
+      "lights": [
+        {
+          "ko": "흐린 날 확산광",
+          "en": "flat overcast daylight, slightly cool"
+        },
+        {
+          "ko": "해질녘 실내외 혼합",
+          "en": "late afternoon flat light, no direct sun"
+        }
+      ]
+    },
+    {
+      "id": "konbini_front",
+      "ko": "편의점 앞",
+      "en": "the street in front of a Japanese convenience store at night, a bicycle against the window, posters on the glass",
+      "io": "out",
+      "lights": [
+        {
+          "ko": "편의점 형광등",
+          "en": "harsh white fluorescent spill from the storefront"
+        },
+        {
+          "ko": "편의점 형광등 + 어두운 골목",
+          "en": "storefront fluorescent light with the street beyond in darkness"
+        }
+      ]
+    },
+    {
       "id": "laundromat",
+      "ko": "동전 세탁소",
+      "en": "a coin laundry down the street, front-loading machines and a folding table",
       "io": "in",
       "lights": [
         {
@@ -435,77 +598,49 @@
       ]
     },
     {
-      "ko": "편의점 앞",
-      "en": "in front of a convenience store at night",
-      "id": "konbini_front",
-      "io": "out",
-      "lights": [
-        {
-          "ko": "편의점 형광등",
-          "en": "cool fluorescent spill from the storefront"
-        },
-        {
-          "ko": "밤 네온",
-          "en": "night, colored neon sign light from the street"
-        }
-      ]
-    },
-    {
-      "ko": "서점 통로",
-      "en": "a narrow aisle of a secondhand bookstore",
-      "id": "bookstore_aisle",
+      "id": "train_seat",
+      "ko": "전철 안 좌석",
+      "en": "a seat on a Tokyo commuter train, other passengers at the edge of the frame",
       "io": "in",
       "lights": [
         {
-          "ko": "서점 실내 조명",
-          "en": "warm indoor bookstore lighting"
+          "ko": "차창 확산광",
+          "en": "flat daylight from the train window"
+        },
+        {
+          "ko": "전철 실내 형광등",
+          "en": "ordinary train interior lighting"
         }
       ]
     },
     {
-      "ko": "강변 산책로",
-      "en": "a riverside path at dusk",
-      "id": "riverside",
-      "io": "out",
+      "id": "her_kitchen",
+      "ko": "자취방 주방 카운터",
+      "en": "her tiny kitchen counter, a mug and a dish rack, the wall close behind her",
+      "io": "in",
       "lights": [
         {
-          "ko": "골든아워",
-          "en": "warm golden hour backlight"
-        },
+          "ko": "주방 형광등",
+          "en": "one fluorescent kitchen light"
+        }
+      ]
+    },
+    {
+      "id": "crosswalk",
+      "ko": "횡단보도 앞",
+      "en": "a crossing in a Tokyo neighborhood, waiting for the light with a few other people at the edge of the frame",
+      "io": "out",
+      "lights": [
         {
           "ko": "흐린 날 확산광",
-          "en": "grey overcast daylight"
+          "en": "flat overcast daylight"
         }
       ]
     },
     {
-      "ko": "공원 벤치",
-      "en": "a park bench under autumn trees",
-      "id": "park_bench",
-      "io": "out",
-      "lights": [
-        {
-          "ko": "가을 오후 햇살",
-          "en": "warm autumn afternoon sunlight through trees"
-        }
-      ]
-    },
-    {
-      "ko": "주방 카운터",
-      "en": "her tiny kitchen counter",
-      "id": "kitchen_counter",
-      "io": "in",
-      "lights": [
-        {
-          "ko": "아침 창가 햇살",
-          "en": "bright morning light from the kitchen window"
-        }
-      ]
-    },
-    {
-      "ko": "레코드숍 매장",
-      "en": "a cramped record shop, crates of LPs",
       "id": "record_shop",
+      "ko": "레코드숍 매장",
+      "en": "a cramped record shop, crates of LPs and a handwritten divider card",
       "io": "in",
       "lights": [
         {
@@ -513,82 +648,78 @@
           "en": "warm dim shop lighting with a practical lamp"
         }
       ]
-    },
-    {
-      "ko": "역 플랫폼",
-      "en": "an open-air station platform",
-      "id": "station_platform",
-      "io": "out",
-      "lights": [
-        {
-          "ko": "새벽 푸른 빛",
-          "en": "cold blue pre-dawn light"
-        },
-        {
-          "ko": "밤 조명",
-          "en": "night under platform lights"
-        }
-      ]
     }
   ],
   "lighting": [
     {
-      "ko": "자연광, 창가 역광",
-      "en": "soft natural window light with a gentle rim of backlight"
-    },
-    {
-      "ko": "골든아워",
-      "en": "warm golden hour sunlight"
+      "ko": "형광등 실내 조명",
+      "en": "ordinary fluorescent indoor lighting, slightly green"
     },
     {
       "ko": "흐린 날 확산광",
-      "en": "flat diffused overcast daylight"
+      "en": "flat overcast daylight, no sun"
     },
     {
-      "ko": "밤 실내 스탠드 조명",
-      "en": "dim warm lamp light at night"
+      "ko": "창가 자연광 + 실내 조명 혼합",
+      "en": "daylight from a window mixed with the room's own lights, uneven exposure"
     },
     {
       "ko": "아이폰 플래시 직광",
-      "en": "direct iPhone flash lighting against a dark background"
+      "en": "direct iPhone flash against a dark background"
     },
     {
-      "ko": "네온 간판 빛",
-      "en": "colored neon sign light spilling from the street"
+      "ko": "편의점 형광등",
+      "en": "harsh white fluorescent light from a storefront"
     },
     {
-      "ko": "형광등 편의점 조명",
-      "en": "cool fluorescent convenience-store lighting"
+      "ko": "지하철 형광등",
+      "en": "flat cool fluorescent platform light"
     },
     {
-      "ko": "새벽 푸른 빛",
-      "en": "cold blue pre-dawn light"
+      "ko": "밤 가로등",
+      "en": "dim street-lamp light with dark areas in the frame"
+    },
+    {
+      "ko": "카페 스탠드 조명",
+      "en": "one warm bulb over the table, the rest of the room dim"
     }
   ],
   "devices": [
     {
       "ko": "아이폰 15 프로",
-      "en": "an iPhone 15 Pro main camera"
+      "en": "an iPhone 15 Pro main camera",
+      "id": "iphone_15_pro"
     },
     {
-      "ko": "아이폰 13 미니",
-      "en": "an iPhone 13 mini camera"
+      "ko": "아이폰 16 프로",
+      "en": "an iPhone 16 Pro main camera",
+      "id": "iphone_16_pro"
     },
     {
-      "ko": "필름 카메라",
-      "en": "a compact 35mm film camera, visible grain"
+      "ko": "아이폰 15 프로 3배 망원",
+      "en": "an iPhone 15 Pro 3x telephoto lens, slightly compressed",
+      "id": "iphone_15_pro_3x"
     },
     {
-      "ko": "폴라로이드 SX-70",
-      "en": "a Polaroid SX-70 instant camera look"
+      "ko": "아이폰 16 프로 3배 망원",
+      "en": "an iPhone 16 Pro 3x telephoto lens, slightly compressed",
+      "id": "iphone_16_pro_3x"
     },
     {
-      "ko": "후지 X100V",
-      "en": "a Fujifilm X100V with classic chrome color"
-    },
-    {
-      "ko": "구형 디지털 카메라",
-      "en": "an old 2010s point-and-shoot digital camera with slight bloom"
+      "ko": "아이폰 15 프로 초광각",
+      "en": "an iPhone 15 Pro ultra-wide lens, slight edge distortion",
+      "id": "iphone_15_pro_uw"
     }
+  ],
+  "device_default_for_mirror": "iphone_16_pro",
+  "imperfections": [
+    "the framing is slightly crooked and she is not centred",
+    "a passer-by's shoulder cuts into the edge of the frame",
+    "the focus sits just behind her so her face is a little soft",
+    "there is slight motion blur on her hand",
+    "the top of her head is close to the frame edge",
+    "one corner is overexposed by a window or a lamp",
+    "the phone was tilted and the verticals lean a little",
+    "part of the table or a chair back blocks the bottom corner"
   ]
 }

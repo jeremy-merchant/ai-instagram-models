@@ -5,168 +5,176 @@
       "id": "01",
       "mode": "noface",
       "seed": 20261116,
-      "label_ko": "오버헤드 디저트 플레이트, 말차와 단팥",
-      "prompt": "Candid daily-life Instagram photo for the personal feed of a 21-year-old Japanese woman living alone in Tokyo. Scene: overhead shot of a matcha parfait and a small plate of dorayaki on a wooden cafe table, condensation on the iced glass, no face, no people. warm cafe indoor lighting. Shot on an iPhone 13 mini camera. Vertical 4:5, unposed amateur aesthetic, authentic everyday moment, realistic texture, natural color, slight grain, no text, no watermark, no face visible.",
+      "label_ko": "아침 창가 책상, 커피와 펼친 책 (손끝만)",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 15 Pro 3x telephoto lens, slightly compressed. Scene: a quiet morning desk beside a window, a ceramic mug of black coffee, an open paperback with a bookmark, a small plant and a linen pouch, only the edge of a hand visible, no face. plain morning daylight, slightly cool. Everyday and imperfect: the phone was tilted and the verticals lean a little. Natural phone noise, ordinary exposure, realistic texture, plain colour. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark, no face visible.",
       "combo": {
-        "scene": "dessert_plate_overhead"
+        "scene": "morning_window_desk",
+        "light": "아침 창가 빛",
+        "device": "아이폰 15 프로 3배 망원"
       }
     },
     {
       "id": "02",
       "mode": "noface",
       "seed": 20261116,
-      "label_ko": "서점 서가 클로즈업, 책등과 손끝",
-      "prompt": "Candid daily-life Instagram photo for the personal feed of a 21-year-old Japanese woman living alone in Tokyo. Scene: close-up of a bookstore shelf in Tokyo, colorful spines, a hand pulling out one novel, warm shop lighting, no face. warm indoor bookstore lighting. Shot on a Polaroid SX-70 instant camera look. Vertical 4:5, unposed amateur aesthetic, authentic everyday moment, realistic texture, natural color, slight grain, no text, no watermark, no face visible.",
+      "label_ko": "오버헤드 디저트 플레이트, 말차와 단팥",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 16 Pro main camera. Scene: overhead shot of a matcha parfait and a small plate of dorayaki on a wooden cafe table, condensation on the glass, no face, no people. ordinary cafe indoor lighting. Everyday and imperfect: the phone was tilted and the verticals lean a little. Natural phone noise, ordinary exposure, realistic texture, plain colour. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark, no face visible.",
       "combo": {
-        "scene": "bookshelf_closeup"
+        "scene": "dessert_plate_overhead",
+        "light": "카페 실내 조명",
+        "device": "아이폰 16 프로"
       }
     },
     {
       "id": "03",
       "mode": "noface",
       "seed": 20261116,
-      "label_ko": "밤의 도쿄 골목과 자판기",
-      "prompt": "Candid daily-life Instagram photo for the personal feed of a 21-year-old Japanese woman living alone in Tokyo. Scene: a narrow Tokyo backstreet at night, a glowing red vending machine, wet asphalt reflections, tangled power lines overhead, no people, no face. night, lit by the vending machine's glow and a distant street lamp. Shot on an old 2010s point-and-shoot digital camera with slight bloom. Vertical 4:5, unposed amateur aesthetic, authentic everyday moment, realistic texture, natural color, slight grain, no text, no watermark, no face visible.",
+      "label_ko": "서점 서가 클로즈업, 책등과 손끝",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 16 Pro 3x telephoto lens, slightly compressed. Scene: close-up of a bookstore shelf in Tokyo, spines of used books, a hand pulling out one novel, no face. warm indoor bookstore lighting. Everyday and imperfect: a passer-by's shoulder cuts into the edge of the frame. Natural phone noise, ordinary exposure, realistic texture, plain colour. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark, no face visible.",
       "combo": {
-        "scene": "tokyo_alley_night"
+        "scene": "bookshelf_closeup",
+        "light": "서점 실내 조명",
+        "device": "아이폰 16 프로 3배 망원"
       }
     },
     {
       "id": "04",
       "mode": "noface",
       "seed": 20261116,
-      "label_ko": "아침 창가 책상, 커피와 펼친 책 (손끝만)",
-      "prompt": "Candid daily-life Instagram photo for the personal feed of a 21-year-old Japanese woman living alone in Tokyo. Scene: a quiet morning desk beside a sunlit window, a ceramic mug of black coffee, an open paperback with a bookmark, a small plant and a linen pouch, only a fingertips edge of the hand visible, no face. bright morning sunlight through a window, warm highlights. Shot on an iPhone 15 Pro main camera. Vertical 4:5, unposed amateur aesthetic, authentic everyday moment, realistic texture, natural color, slight grain, no text, no watermark, no face visible.",
+      "label_ko": "밤의 도쿄 골목과 자판기",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 16 Pro 3x telephoto lens, slightly compressed. Scene: a narrow Tokyo backstreet at night, a glowing vending machine, wet asphalt, tangled power lines overhead, no people, no face. night, lit only by the vending machine and a distant street lamp. Everyday and imperfect: a passer-by's shoulder cuts into the edge of the frame. Natural phone noise, ordinary exposure, realistic texture, plain colour. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark, no face visible.",
       "combo": {
-        "scene": "morning_window_desk"
+        "scene": "tokyo_alley_night",
+        "light": "밤 자판기 불빛",
+        "device": "아이폰 16 프로 3배 망원"
       }
     },
     {
       "id": "05",
       "mode": "person",
       "seed": 20261116,
-      "label_ko": "앞머리 없는 센터 가르마 흑발 · 스트라이프 옥스포드 셔츠 (허리 묶음) · 음식 먹기 직전, 시선은 접시로 · 전철 안 좌석",
-      "prompt": "Using the reference photo only for the woman's face, keep her facial features exactly identical (same eyes, nose, mouth, skin tone) but change everything else: long jet-black hair parted cleanly in the middle with NO bangs, tucked behind both ears, forehead fully exposed. She is wearing a loose blue-and-white striped oxford shirt with the sleeves rolled up, the hem knotted at the waist over straight jeans. Shot: about to take the first bite, chopsticks lifted, eyes cast down toward the plate instead of the lens. Place: a seat on a Tokyo commuter train. Expression: an unguarded open laugh. Lighting: cold blue early-morning light. Shot on an iPhone 15 Pro main camera. Vertical 4:5 candid Instagram feed photo, unposed and slightly imperfect, realistic skin texture, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
+      "label_ko": "베레모 착용 · 트레이닝 세트 + 스니커즈 · 어깨 너머로 부르는 듯한 클로즈업 · 도쿄 주택가 골목길",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 16 Pro 3x telephoto lens, slightly compressed. Keep the woman's face from the reference photo identical (same eyes, nose, mouth, face shape, skin tone); change everything else: a black wool beret tilted to one side, black hair loose and tucked behind one ear. She is wearing a navy tracksuit jacket half zipped over a white tank and matching joggers. She has just turned her head back over her shoulder because the friend called her name; only three-quarters of her face is visible. Place: a narrow residential street in Tokyo with parked bicycles, potted plants, a vending machine and tangled power lines. Expression: sleepy half-lidded eyes. Light: late afternoon flat light, no direct sun. Everyday and imperfect: there is slight motion blur on her hand. Real skin with visible pores and small texture, light everyday makeup, no beauty retouching, no skin smoothing, no glow. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
       "combo": {
-        "hairstyle": "center_part_no_bangs",
-        "clothing": "striped_oxford",
-        "shot": "eating_first_bite",
-        "place": "train_seat",
-        "expression": "입 벌려 웃는 자연스러운 웃음",
-        "lighting": "새벽 푸른 빛",
-        "device": "아이폰 15 프로"
+        "hairstyle": "beret",
+        "clothing": "tracksuit",
+        "shot": "over_shoulder_closeup",
+        "place": "tokyo_alley_walk",
+        "expression": "졸린 듯 반쯤 감은 눈",
+        "lighting": "해질녘 실내외 혼합",
+        "device": "아이폰 16 프로 3배 망원"
       }
     },
     {
       "id": "06",
       "mode": "person",
       "seed": 20261116,
-      "label_ko": "옆으로 넘긴 사이드 스웹트 앞머리 · 베이지 트렌치코트 · 어깨 너머로 부르는 듯한 클로즈업 · 편의점 앞",
-      "prompt": "Using the reference photo only for the woman's face, keep her facial features exactly identical (same eyes, nose, mouth, skin tone) but change everything else: black hair swept to one side in a soft side-part, long side-swept bangs across the forehead to the temple. She is wearing a long beige cotton trench coat over a fine cream turtleneck and dark straight trousers. Shot: over-the-shoulder close-up, only part of the face visible in three-quarter rear angle. Place: in front of a convenience store at night. Expression: a playful slight pout. Lighting: cool fluorescent spill from the storefront. Shot on a Fujifilm X100V with classic chrome color. Vertical 4:5 candid Instagram feed photo, unposed and slightly imperfect, realistic skin texture, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
+      "label_ko": "느슨한 로우 번 (똥머리) · 머슬 티 + 카고 팬츠 · 친구가 식탁 맞은편에서 찍어준 컷 · 동네 카페 창가 자리",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 16 Pro main camera. Keep the woman's face from the reference photo identical (same eyes, nose, mouth, face shape, skin tone); change everything else: black hair gathered into a loose bun low at the nape of the neck, ears and neck visible, a few strands loose at the temples. She is wearing a washed grey muscle tee tucked into olive cargo pants. The photo was taken by the friend sitting across the table, one-handed; she is in the middle of a sentence, eyes on her friend or on her food, not on the lens. Place: a window seat of a small neighborhood cafe, cups on the table, the street behind the glass. Expression: a drowsy, near-neutral expression. Light: ordinary cafe lighting mixed with daylight. Everyday and imperfect: the framing is slightly crooked and she is not centred. Real skin with visible pores and small texture, light everyday makeup, no beauty retouching, no skin smoothing, no glow. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
       "combo": {
-        "hairstyle": "side_swept",
-        "clothing": "beige_trench",
-        "shot": "over_shoulder_closeup",
-        "place": "konbini_front",
-        "expression": "장난스럽게 삐죽",
-        "lighting": "편의점 형광등",
-        "device": "후지 X100V"
+        "hairstyle": "low_loose_bun",
+        "clothing": "muscle_tee_cargo",
+        "shot": "friend_across_table",
+        "place": "cafe_window_seat",
+        "expression": "무표정에 가까운 나른한 표정",
+        "lighting": "카페 실내 조명",
+        "device": "아이폰 16 프로"
       }
     },
     {
       "id": "07",
       "mode": "person",
       "seed": 20261116,
-      "label_ko": "단발 보브로 바꾼 날 · 플로럴 원피스 + 가디건 · 거울 셀카, 폰으로 얼굴 반쯤 가림 · 주방 카운터",
-      "prompt": "Using the reference photo only for the woman's face, keep her facial features exactly identical (same eyes, nose, mouth, skin tone) but change everything else: chin-length short bob haircut, middle part, ends curling slightly inward. She is wearing a small-print floral long-sleeve dress in muted sage, with a thin knit cardigan slipping off one shoulder. Shot: a mirror selfie taken with an iPhone held in front of the face, covering the lower half of the face, the other hand in a pocket. Place: her tiny kitchen counter. Expression: eyes smiling, corners crinkled. Lighting: bright morning light from the kitchen window. Shot on an old 2010s point-and-shoot digital camera with slight bloom. Vertical 4:5 candid Instagram feed photo, unposed and slightly imperfect, realistic skin texture, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
+      "label_ko": "높은 포니테일 · 오트밀 니트 + 와이드 연청 · 자전거에 오르는 중간 동작 · 낮 시간대 도쿄 공원 벤치",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 16 Pro 3x telephoto lens, slightly compressed. Keep the woman's face from the reference photo identical (same eyes, nose, mouth, face shape, skin tone); change everything else: all of her black hair gathered into one high ponytail at the crown, the nape and ears bare. She is wearing a soft oatmeal crew-neck knit with the sleeves pulled over her hands and wide-leg light denim. Mid-motion swinging one leg over a city bicycle, body angled away. Place: a slatted wooden bench in a Tokyo park, a low hedge and a bicycle behind her, people walking far down the path. Expression: a playful slight pout. Light: flat overcast daylight, no sun. Everyday and imperfect: there is slight motion blur on her hand. Real skin with visible pores and small texture, light everyday makeup, no beauty retouching, no skin smoothing, no glow. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
       "combo": {
-        "hairstyle": "short_bob_wig",
-        "clothing": "floral_dress",
-        "shot": "mirror_phone_face_half",
-        "place": "kitchen_counter",
-        "expression": "눈웃음",
-        "lighting": "아침 창가 햇살",
-        "device": "구형 디지털 카메라"
+        "hairstyle": "high_ponytail",
+        "clothing": "knit_sweater_wide_denim",
+        "shot": "getting_on_bike",
+        "place": "park_bench_day",
+        "expression": "장난스럽게 삐죽",
+        "lighting": "흐린 날 확산광",
+        "device": "아이폰 16 프로 3배 망원"
       }
     },
     {
       "id": "08",
       "mode": "person",
       "seed": 20261116,
-      "label_ko": "높은 포니테일 · 가디건 + 롱 스커트 · 책 보며 고개 숙인 컷 · 강변 산책로",
-      "prompt": "Using the reference photo only for the woman's face, keep her facial features exactly identical (same eyes, nose, mouth, skin tone) but change everything else: sleek high ponytail tied at the crown of the head, baby hairs framing the temples, neck and ears fully visible. She is wearing a chunky oatmeal cardigan hanging open over a ribbed top and a long pleated charcoal skirt. Shot: head lowered, eyes on an open book in her hands, gaze completely off-camera. Place: a riverside path at dusk. Expression: an unguarded open laugh. Lighting: grey overcast daylight. Shot on an iPhone 13 mini camera. Vertical 4:5 candid Instagram feed photo, unposed and slightly imperfect, realistic skin texture, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
+      "label_ko": "옆으로 넘긴 사이드 스웹트 앞머리 · 블랙 가죽 자켓 + 크롭 티 · 한 입 먹기 직전, 시선은 접시로 · 동네 카페 창가 자리",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 16 Pro main camera. Keep the woman's face from the reference photo identical (same eyes, nose, mouth, face shape, skin tone); change everything else: black hair in a soft side part, long side-swept bangs across the forehead. She is wearing a cropped black leather biker jacket over a fitted white tee and high-waisted black wide-leg jeans. Caught just before a bite, chopsticks or a fork in her hand, her eyes down on the plate. Place: a window seat of a small neighborhood cafe, cups on the table, the street behind the glass. Expression: a drowsy, near-neutral expression. Light: plain daylight from the window. Everyday and imperfect: there is slight motion blur on her hand. Real skin with visible pores and small texture, light everyday makeup, no beauty retouching, no skin smoothing, no glow. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
       "combo": {
-        "hairstyle": "high_ponytail",
-        "clothing": "cardigan_long_skirt",
-        "shot": "looking_down_book",
-        "place": "riverside",
-        "expression": "입 벌려 웃는 자연스러운 웃음",
-        "lighting": "흐린 날 확산광",
-        "device": "아이폰 13 미니"
+        "hairstyle": "side_swept",
+        "clothing": "black_leather_jacket",
+        "shot": "eating_bite",
+        "place": "cafe_window_seat",
+        "expression": "무표정에 가까운 나른한 표정",
+        "lighting": "창가 자연광",
+        "device": "아이폰 16 프로"
       }
     },
     {
       "id": "09",
       "mode": "person",
       "seed": 20261116,
-      "label_ko": "베레모 착용 · 바시티 자켓 + 미니스커트 · 뒷모습에서 살짝 돌아보는 컷 · 동전 세탁소",
-      "prompt": "Using the reference photo only for the woman's face, keep her facial features exactly identical (same eyes, nose, mouth, skin tone) but change everything else: a black wool beret tilted slightly to one side, black hair loose and tucked behind one ear. She is wearing a cream-and-black varsity jacket over a cropped tee and a plaid mini skirt, thigh socks. Shot: seen from behind, body turned away, head half-turned back over the shoulder. Place: a coin laundry down the street. Expression: sleepy half-lidded eyes. Lighting: dusk light mixed with fluorescent tubes. Shot on an iPhone 15 Pro main camera. Vertical 4:5 candid Instagram feed photo, unposed and slightly imperfect, realistic skin texture, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
+      "label_ko": "앞머리 없는 센터 가르마 흑발 · 오버사이즈 그레이 후드티 + 조거팬츠 · 벤치·플랫폼에 앉아 기다리는 옆모습 · 낮 시간대 도쿄 공원 벤치",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 15 Pro 3x telephoto lens, slightly compressed. Keep the woman's face from the reference photo identical (same eyes, nose, mouth, face shape, skin tone); change everything else: long black hair parted in the middle with no fringe, both sides tucked behind the ears, forehead bare. She is wearing an oversized heather-grey hoodie with the sleeves pushed to the elbows and relaxed grey joggers. She sits waiting on a bench, leaning forward a little, a bag on her lap, looking down at her phone, seen from the side by whoever sits next to her. Place: a slatted wooden bench in a Tokyo park, a low hedge and a bicycle behind her, people walking far down the path. Expression: a playful slight pout. Light: soft autumn afternoon daylight through bare trees. Everyday and imperfect: there is slight motion blur on her hand. Real skin with visible pores and small texture, light everyday makeup, no beauty retouching, no skin smoothing, no glow. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
       "combo": {
-        "hairstyle": "beret",
-        "clothing": "varsity_jacket",
-        "shot": "back_turned_glance",
-        "place": "laundromat",
-        "expression": "졸린 듯 반쯤 감은 눈",
-        "lighting": "해질녘 실내 조명",
-        "device": "아이폰 15 프로"
+        "hairstyle": "center_part_no_bangs",
+        "clothing": "oversize_hoodie_joggers",
+        "shot": "waiting_bench",
+        "place": "park_bench_day",
+        "expression": "장난스럽게 삐죽",
+        "lighting": "가을 오후 확산광",
+        "device": "아이폰 15 프로 3배 망원"
       }
     },
     {
       "id": "10",
       "mode": "person",
       "seed": 20261116,
-      "label_ko": "니트 비니 착용 · 블랙 가죽 자켓 + 크롭 티 · 골목을 걸어가는 뒷모습 전신 · 역 플랫폼",
-      "prompt": "Using the reference photo only for the woman's face, keep her facial features exactly identical (same eyes, nose, mouth, skin tone) but change everything else: a soft ribbed knit beanie pulled down low over the head, a few strands of black hair escaping at the temples. She is wearing a cropped black leather biker jacket over a fitted white tee and high-waisted black wide-leg jeans. Shot: full body walking away down a narrow street, one foot mid-step, back to the camera. Place: an open-air station platform. Expression: a thoughtful, distant expression. Lighting: night under platform lights. Shot on an old 2010s point-and-shoot digital camera with slight bloom. Vertical 4:5 candid Instagram feed photo, unposed and slightly imperfect, realistic skin texture, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
+      "label_ko": "샤워 후 물기 있는 머리 · 플로럴 원피스 + 가디건 · 거울 셀카, 최신 아이폰(3구 카메라) 노출 · 자취방 엘리베이터 거울",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 16 Pro main camera. Keep the woman's face from the reference photo identical (same eyes, nose, mouth, face shape, skin tone); change everything else: damp hair pushed back from the face after a shower, a few strands stuck to her cheek. She is wearing a small-print floral long-sleeve dress with a thin knit cardigan open over it. A mirror selfie she took herself, standing off-centre, the phone held at chest height so it covers her chin and mouth; in the mirror the back of the phone is visible. The phone in her hand is a current iPhone Pro: a large square camera plate on the upper left with three big lenses in a triangle plus a small flash, natural titanium or white titanium body, clearly the newest model and not an older iPhone. Place: the full-length mirror inside a small apartment elevator, metal doors and a paper shopping bag at the edge of the frame. Expression: a playful slight pout. Light: flat ceiling panel light, slightly green and uneven. Everyday and imperfect: the framing is slightly crooked and she is not centred. Real skin with visible pores and small texture, light everyday makeup, no beauty retouching, no skin smoothing, no glow. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
       "combo": {
-        "hairstyle": "beanie",
-        "clothing": "black_leather_jacket",
-        "shot": "walking_away_street",
-        "place": "station_platform",
-        "expression": "뭔가 생각하는 표정",
-        "lighting": "밤 조명",
-        "device": "구형 디지털 카메라"
+        "hairstyle": "wet_after_shower",
+        "clothing": "floral_dress",
+        "shot": "mirror_selfie_current_iphone",
+        "place": "elevator_mirror",
+        "expression": "장난스럽게 삐죽",
+        "lighting": "엘리베이터 천장 조명",
+        "device": "아이폰 16 프로"
       }
     },
     {
       "id": "11",
       "mode": "person",
       "seed": 20261116,
-      "label_ko": "반묶음 (앞머리 올려 묶은 하프업) · 블랙 터틀넥 + 울 코트 · 창밖을 보는 옆얼굴 · 자취방 침대",
-      "prompt": "Using the reference photo only for the woman's face, keep her facial features exactly identical (same eyes, nose, mouth, skin tone) but change everything else: half-up half-down hairstyle, top section gathered with a tortoiseshell claw clip, forehead and face fully visible. She is wearing a black fine-gauge turtleneck under an oversized grey wool coat, hands deep in the pockets. Shot: seated by the window, chin resting on her hand, watching the city outside instead of the camera. Place: her own small bedroom, on the bed under a rumpled duvet. Expression: eyes smiling, corners crinkled. Lighting: soft morning window light on white bedding. Shot on a Polaroid SX-70 instant camera look. Vertical 4:5 candid Instagram feed photo, unposed and slightly imperfect, realistic skin texture, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
+      "label_ko": "볼캡 착용, 뒤로 묶은 머리 · 린넨 셔츠 + 반바지 (집 앞) · 진열대·매장에서 물건 고르는 중 · 구제숍·잡화점 진열대 앞",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 15 Pro ultra-wide lens, slight edge distortion. Keep the woman's face from the reference photo identical (same eyes, nose, mouth, face shape, skin tone); change everything else: a navy baseball cap worn low, hair tied in a low ponytail through the back of the cap. She is wearing a loose white linen shirt open over a tank and soft grey shorts. She stands at a display holding an item up to look at it, head slightly bowed, seen from two metres away at an angle. Place: a cramped second-hand clothing and accessory shop in Shimokitazawa, racks of clothes, a price board, boxes on the floor. Expression: eyes smiling, corners crinkled. Light: plain shop lighting, uneven. Everyday and imperfect: the phone was tilted and the verticals lean a little. Real skin with visible pores and small texture, light everyday makeup, no beauty retouching, no skin smoothing, no glow. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
       "combo": {
-        "hairstyle": "half_up",
-        "clothing": "turtleneck_coat",
-        "shot": "window_gaze_out",
-        "place": "bedroom_bed",
+        "hairstyle": "baseball_cap",
+        "clothing": "linen_shirt_shorts",
+        "shot": "browsing_shelf",
+        "place": "vintage_shop",
         "expression": "눈웃음",
-        "lighting": "아침 창가 햇살",
-        "device": "폴라로이드 SX-70"
+        "lighting": "가게 실내 조명",
+        "device": "아이폰 15 프로 초광각"
       }
     },
     {
       "id": "12",
       "mode": "person",
       "seed": 20261116,
-      "label_ko": "느슨한 로우 번 (똥머리) · 오트밀 니트 + 와이드 연청 · 머리 묶는 중, 팔 올린 자세 · 서점 통로",
-      "prompt": "Using the reference photo only for the woman's face, keep her facial features exactly identical (same eyes, nose, mouth, skin tone) but change everything else: loose low bun at the nape of the neck, a few soft strands falling out around the face and ears. She is wearing a soft oatmeal crew-neck knit sweater, sleeves over the hands, with wide-leg light denim and white sneakers. Shot: both arms lifted tying her hair up, face partly hidden by her own arm. Place: a narrow aisle of a secondhand bookstore. Expression: a playful slight pout. Lighting: warm indoor bookstore lighting. Shot on a Fujifilm X100V with classic chrome color. Vertical 4:5 candid Instagram feed photo, unposed and slightly imperfect, realistic skin texture, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
+      "label_ko": "반묶음 (앞머리 올려 묶은 하프업) · 베이지 트렌치코트 · 친구가 멀리서 찍은 스냅 · 도쿄 주택가 골목길",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 15 Pro main camera. Keep the woman's face from the reference photo identical (same eyes, nose, mouth, face shape, skin tone); change everything else: hair half up, the top section held by a tortoiseshell claw clip, the rest falling over the shoulders. She is wearing a long beige cotton trench coat over a cream turtleneck and dark straight trousers. A candid snap taken from a few metres away by a friend, she is not aware of it and sits off-centre in the frame. Place: a narrow residential street in Tokyo with parked bicycles, potted plants, a vending machine and tangled power lines. Expression: a drowsy, near-neutral expression. Light: late afternoon flat light, no direct sun. Everyday and imperfect: the top of her head is close to the frame edge. Real skin with visible pores and small texture, light everyday makeup, no beauty retouching, no skin smoothing, no glow. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark. Do not reproduce the reference pose, outfit, hairstyle or background.",
       "combo": {
-        "hairstyle": "low_loose_bun",
-        "clothing": "knit_sweater_wide_denim",
-        "shot": "hair_tying",
-        "place": "bookstore_aisle",
-        "expression": "장난스럽게 삐죽",
-        "lighting": "서점 실내 조명",
-        "device": "후지 X100V"
+        "hairstyle": "half_up",
+        "clothing": "beige_trench",
+        "shot": "candid_far_snap",
+        "place": "tokyo_alley_walk",
+        "expression": "무표정에 가까운 나른한 표정",
+        "lighting": "해질녘 실내외 혼합",
+        "device": "아이폰 15 프로"
       }
     }
   ]
