@@ -56,6 +56,11 @@ NO_TEXT = META.get(
     "no menu board, no price sign, no receipt, no poster with lettering, "
     "no labels on packaging, no signage on buildings.",
 )
+NO_PROPS = META.get(
+    "mandatory_no_small_props",
+    "Absolutely no earbuds, no earbud case, no small electronics lying on surfaces, "
+    "no fruit, no berries, no fork, no knife, no spoon, no cutlery.",
+)
 GLAMOUR = POOLS.get("glamour")
 
 NOFACE_TEMPLATE = (
@@ -63,7 +68,7 @@ NOFACE_TEMPLATE = (
     "Scene: {scene}. "
     "{lighting}. "
     "Everyday and imperfect: {imperfection}. Natural phone noise, ordinary exposure, "
-    "realistic texture, plain colour. {no_text} "
+    "realistic texture, plain colour. {no_text} {no_props} "
     "Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, "
     "no text, no watermark, no face visible."
 )
@@ -77,7 +82,7 @@ PERSON_TEMPLATE = (
     "Place: {place}. Expression: {expression}. Light: {lighting}. "
     "Everyday and imperfect: {imperfection}. "
     "Real skin with visible pores and small texture, light everyday makeup, "
-    "no beauty retouching, no skin smoothing, no glow. {no_text} "
+    "no beauty retouching, no skin smoothing, no glow. {no_text} {no_props} "
     "Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, "
     "no text, no watermark. "
     "Do not reproduce the reference pose, outfit, hairstyle or background."
@@ -147,6 +152,7 @@ def build_batch(seed, noface, person, mode="daily"):
                 device=dv["en"],
                 imperfection=rng.choice(imperfections),
                 no_text=NO_TEXT,
+                no_props=NO_PROPS,
             ),
             "combo": {"scene": sc["id"], "light": sc["light_ko"], "device": dv["ko"]},
         })
@@ -177,6 +183,7 @@ def build_batch(seed, noface, person, mode="daily"):
                     phone_text=phone_text, place=pl["en"], expression=ex["en"],
                     lighting=li["en"], device=dv["en"],
                     imperfection=rng.choice(imperfections), no_text=NO_TEXT,
+                    no_props=NO_PROPS,
                 ),
                 "combo": {"look": look["id"], "hairstyle": hs["id"], "clothing": cl["id"],
                           "shot": sh["id"], "place": pl["id"], "expression": ex["ko"],
@@ -216,6 +223,7 @@ def build_batch(seed, noface, person, mode="daily"):
                 lighting=li["en"], device=dv["en"],
                 imperfection=rng.choice(imperfections),
                 no_text=NO_TEXT,
+                no_props=NO_PROPS,
             ),
             "combo": {"hairstyle": hs["id"], "clothing": cl["id"], "shot": sh["id"],
                       "place": pl["id"], "expression": ex["ko"],
@@ -264,7 +272,7 @@ def check_batch(items):
 
 
 def main(argv=None):
-    ap = argparse.ArgumentParser(description="Mio feed random prompt generator (v3.1, Seoul / anti-AI-tell)")
+    ap = argparse.ArgumentParser(description="Mio feed random prompt generator (v3.2, Seoul / anti-AI-tell / no small props)")
     ap.add_argument("--seed", type=int, default=20261116)
     ap.add_argument("--noface", type=int, default=4, help="number of no-face daily cuts")
     ap.add_argument("--person", type=int, default=8, help="number of person cuts")

@@ -3,7 +3,7 @@
     "name": "Mio Daily Feed Prompt Pools",
     "model": "Mio (@_3io.log_) — 21, Japanese, black hair, gray-tinted eyes, pale skin, living alone in Seoul",
     "structure_credit": "Category-pool structure inspired by fairy-root/Flux-Prompt-Generator (MIT) — https://github.com/fairy-root/Flux-Prompt-Generator",
-    "revision": "v3.1 (2026-11-16) — 서울 거주 전환 + 책·글자 배제",
+    "revision": "v3.2 (2026-11-16) — 서울 거주 + 책·글자 + 뭉개지는 소품 배제",
     "updated": "2026-11-16",
     "revision_note_ko": "기운님 피드백 \"근데 책은 좀 그렇지않나 글자 완벽하지않을거아냐 ai 생성이 그리고 일본인인데 한국사는게 요즘 유행같던데\" 반영. ① 콘셉트를 '도쿄 자취' → '서울 자취'로 전환 ② 펼친 책·책등·간판·메뉴판·영수증·라벨처럼 확대하면 AI 가짜 글자가 드러나는 피사체를 전 장면에서 제거 ③ no_face_scenes·places_person 풀을 서울 기준으로 다시 썼습니다.",
     "banned_keywords": [
@@ -55,29 +55,42 @@
       "signboard",
       "label on packaging",
       "hangul sign",
-      "japanese sign"
+      "japanese sign",
+      "earbuds",
+      "earbud case",
+      "airpods",
+      "wireless charging case",
+      "cutlery",
+      "fork",
+      "knife",
+      "spoon",
+      "half a strawberry",
+      "half a tomato",
+      "berries"
     ],
-    "mandatory_no_text": "No printed words anywhere in the frame: no book, no open book, no book spines, no menu board, no price sign, no receipt, no poster with lettering, no labels on packaging, no signage on buildings."
+    "mandatory_no_text": "No printed words anywhere in the frame: no book, no open book, no book spines, no menu board, no price sign, no receipt, no poster with lettering, no labels on packaging, no signage on buildings.",
+    "revision_note_v3_2_ko": "기운님 지적 \"에어팟이랑 토마토 둘다 이상하잖아 제대로 검수란하냐 그리고 한글로도써야지\" 반영. ① 에어팟 케이스·폰·소형 전자기기·작은 과일(반쪽 딸기·토마토·베리류)·커틀러리처럼 확대하면 형태가 뭉개지는 소품을 장면에서 제거 ② 세 장면(서울 원룸 아침·성수 카페·주택가 골목)에서 해당 소품과 근거리 자전거·스쿠터·선글라스를 빼고 재작성 ③ banned_subjects 를 늘리고 mandatory_no_small_props 문장을 모든 프롬프트에 강제합니다.",
+    "mandatory_no_small_props": "Absolutely no earbuds, no earbud case, no AirPods, no small electronics lying on surfaces, no fruit, no berries, no half-cut fruit, no fork, no knife, no spoon, no cutlery."
   },
   "no_face_scenes": [
     {
       "id": "seoul_morning_table",
-      "ko": "서울 원룸 창가 아침 테이블, 아이스 아메리카노 머그·토스트·이어폰 케이스 (창밖 서울 빌라)",
-      "en": "a small wooden table pushed against the window of a tiny Seoul one-room studio apartment in the morning, a plain unbranded ribbed ceramic mug of iced americano, a white earbud case with no logo, a small plate with buttered toast and half a strawberry, ordinary low-rise Seoul villa roofs and pale apartment blocks seen through the glass, every building plain with no shop signs and no lettering",
+      "ko": "서울 원룸 창가 아침 테이블, 아이스 아메리카노(손잡이 없는 흰 컵)·버터 토스트 한 조각·냅킨 (창밖 서울 기와지붕·아파트)",
+      "en": "a small round wooden table pushed against the window of a tiny Seoul one-room studio apartment in the morning, a plain handleless white ceramic cup of iced americano with condensation and ice at the top, a plain white plate holding one single slice of buttered toast, a crumpled beige cotton napkin beside the plate, nothing else on the table, ordinary low-rise Seoul villa roofs with dark tiles and pale apartment blocks seen through the glass, every building plain with no shop signs and no lettering",
       "light_ko": "흐린 아침 창가 빛",
       "light_en": "flat cool overcast morning daylight from the window"
     },
     {
       "id": "seoul_cafe_dessert",
-      "ko": "성수동 카페 테이블, 아이스 아메리카노·바스크 치즈케이크·선글라스·폰 엎어둔 채",
-      "en": "a worn wooden table for two in a small corner cafe in Seongsu-dong, Seoul, a tall glass of iced americano, a square slice of basque cheesecake on a plain cream plate, folded black sunglasses, a phone lying face down with only its back showing, a plain painted concrete wall behind with no menu board, no posters and no lettering",
+      "ko": "성수동 카페 테이블, 아이스 아메리카노·바스크 치즈케이크·엎어둔 폰·종이냅킨·물컵",
+      "en": "a worn wooden table for two in a small corner cafe in Seongsu-dong, Seoul, a tall glass of iced americano on a thin coaster, a square slice of plain basque cheesecake on a cream plate, a phone lying face down with only its dark back and camera bump showing, a crumpled paper napkin, a small glass of water, no sunglasses, no cutlery, a plain painted concrete wall behind with no menu board, no posters and no lettering",
       "light_ko": "늦은 오후 창가 빛 + 약한 전구",
       "light_en": "flat late-afternoon daylight from a window mixed with one dim warm bulb"
     },
     {
       "id": "seoul_evening_alley",
-      "ko": "서울 주택가 골목 저녁, 골목 끝 지나가는 버스·가로등·자전거",
-      "en": "a quiet narrow residential alley in a Seoul neighborhood at dusk seen from several steps back, low brick and concrete walls, a stucco house with a tiled roof, a blue plastic recycling bin, a parked city bicycle and a small delivery scooter, one street lamp just switched on, a city bus passing as a soft blur where the alley meets the road, all walls and shutters plain and empty with no shop signs and no lettering",
+      "ko": "서울 주택가 골목 저녁, 골목 끝 지나가는 버스·가로등·파란 재활용함·화분",
+      "en": "a quiet narrow residential alley in a Seoul neighborhood at dusk seen from several steps back, low brick and concrete walls, a stucco house with a tiled roof, a blue plastic recycling bin, a few potted plants on a concrete stoop, one street lamp just switched on, a city bus passing as a soft blur where the alley meets the road, no parked bicycle, no scooter, no vehicles near the camera, all walls and shutters plain and empty with no shop signs and no lettering",
       "light_ko": "해질녘 가로등 불빛",
       "light_en": "dim blue-grey dusk light with one street lamp"
     },
@@ -112,7 +125,7 @@
     {
       "id": "seoul_gukbap_table",
       "ko": "동네 국밥집 테이블, 반찬과 물컵 (메뉴판 없음)",
-      "en": "a worn formica table in a small neighborhood gukbap diner in Seoul, a half-eaten bowl of soup with rice, three small side dishes, a stainless water cup, a plastic spoon, chairs pushed back, a plain tiled wall behind with no menu board and no lettering",
+      "en": "a worn formica table in a small neighborhood gukbap diner in Seoul, a half-eaten bowl of soup with rice, three small side dishes, a stainless water cup, chopsticks resting across the bowl, chairs pushed back, a plain tiled wall behind with no menu board and no lettering",
       "light_ko": "식당 형광등 + 창가 빛",
       "light_en": "one fluorescent tube overhead plus flat daylight from the door"
     },
@@ -346,7 +359,7 @@
     {
       "id": "eating_bite",
       "ko": "한 입 먹기 직전, 시선은 접시로",
-      "en": "Caught just before a bite, chopsticks or a fork in her hand, her eyes down on the plate.",
+      "en": "Caught just before a bite, chopsticks in her hand, her eyes down on the plate.",
       "io": "in",
       "place_ids": [
         "seoul_diner_table",

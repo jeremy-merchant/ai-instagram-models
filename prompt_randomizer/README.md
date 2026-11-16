@@ -140,3 +140,12 @@ check: clean (15 AI-gloss phrases + 12 safety phrases + 15 text/book subjects sc
 ```
 
 `places_person`은 `io`(`in`/`out`)와 `lights`(가능한 조명 목록)를 함께 넣고, 인물 구도에 특정 장소가 필요하면 `place_ids`에 `places_person`의 id를 넣습니다. 카메라는 최신 아이폰만 추가하세요 — 구형 기기나 필름 카메라는 이 풀의 목적(AI 티 제거)과 반대입니다.
+
+## 🧴 v3.2 (2026-11-16) — 뭉개지는 소품 금지
+
+기운님 지적 *"에어팟이랑 토마토 둘다 이상하잖아 제대로 검수란하냐"* 반영.
+
+- `meta.banned_subjects` 15 → **26개**: `earbuds` · `earbud case` · `airpods` · `wireless charging case` · `cutlery` · `fork` · `knife` · `spoon` · `half a strawberry` · `half a tomato` · `berries` 추가.
+- `meta.mandatory_no_small_props` 추가 — 모든 프롬프트에 `Absolutely no earbuds, no earbud case, no AirPods, no small electronics lying on surfaces, no fruit, no berries, no half-cut fruit, no fork, no knife, no spoon, no cutlery.` 문장이 붙습니다.
+- `no_face_scenes` 3종(서울 아침 테이블·성수 카페·주택가 골목)에서 해당 소품과 근거리 자전거·스쿠터·선글라스를 빼고 다시 썼습니다.
+- `--check`는 `15 AI-gloss phrases + 12 safety phrases + 26 text/book subjects`를 스캔합니다. v3.2 배치·glamour 배치 둘 다 `clean` 확인.
