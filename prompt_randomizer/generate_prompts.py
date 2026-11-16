@@ -8,6 +8,12 @@ from the category pools in pools.json.  The pool structure follows
 fairy-root/Flux-Prompt-Generator (MIT) —
 https://github.com/fairy-root/Flux-Prompt-Generator
 
+v3.1 (2026-11-16) — 서울 거주 전환 + 책·글자 배제
+    * 콘셉트가 '도쿄 자취' → '서울 자취(한국 거주 일본인)'로 바뀌었습니다.
+    * 펼친 책·책등·간판·메뉴판·영수증·라벨처럼 확대하면 AI 가짜 글자가
+      드러나는 피사체를 모든 프롬프트에서 배제하고, meta.banned_subjects 로
+      --check 가 검사합니다(text 음성 지시문은 검사 전에 제거).
+
 v2.1 (2026-11-16) — "AI 티" 제거 개정
     * AI 화보 키워드(cinematic / golden hour / bokeh / 8k / masterpiece /
       perfect skin ...)를 풀에서 전부 지우고, 남아 있으면 --check 가 실패합니다.
@@ -34,6 +40,7 @@ Usage
 import argparse
 import json
 import random
+import re
 import sys
 from pathlib import Path
 
@@ -42,6 +49,13 @@ POOLS = json.loads((HERE / "pools.json").read_text(encoding="utf-8"))
 META = POOLS.get("meta", {})
 BANNED = [k.lower() for k in META.get("banned_keywords", [])]
 SAFETY_BANNED = [k.lower() for k in META.get("safety_banned_keywords", [])]
+BANNED_SUBJECTS = [k.lower() for k in META.get("banned_subjects", [])]
+NO_TEXT = META.get(
+    "mandatory_no_text",
+    "No printed words anywhere in the frame: no book, no open book, no book spines, "
+    "no menu board, no price sign, no receipt, no poster with lettering, "
+    "no labels on packaging, no signage on buildings.",
+)
 GLAMOUR = POOLS.get("glamour")
 
 NOFACE_TEMPLATE = (
@@ -49,7 +63,7 @@ NOFACE_TEMPLATE = (
     "Scene: {scene}. "
     "{lighting}. "
     "Everyday and imperfect: {imperfection}. Natural phone noise, ordinary exposure, "
-    "realistic texture, plain colour. "
+    "realistic texture, plain colour. {no_text} "
     "Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, "
     "no text, no watermark, no face visible."
 )
@@ -63,7 +77,7 @@ PERSON_TEMPLATE = (
     "Place: {place}. Expression: {expression}. Light: {lighting}. "
     "Everyday and imperfect: {imperfection}. "
     "Real skin with visible pores and small texture, light everyday makeup, "
-    "no beauty retouching, no skin smoothing, no glow. "
+    "no beauty retouching, no skin smoothing, no glow. {no_text} "
     "Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, "
     "no text, no watermark. "
     "Do not reproduce the reference pose, outfit, hairstyle or background."
@@ -132,6 +146,7 @@ def build_batch(seed, noface, person, mode="daily"):
                 lighting=sc["light_en"],
                 device=dv["en"],
                 imperfection=rng.choice(imperfections),
+                no_text=NO_TEXT,
             ),
             "combo": {"scene": sc["id"], "light": sc["light_ko"], "device": dv["ko"]},
         })
@@ -161,7 +176,7 @@ def build_batch(seed, noface, person, mode="daily"):
                     hairstyle=hs["en"], clothing=cl["en"], shot=sh["en"],
                     phone_text=phone_text, place=pl["en"], expression=ex["en"],
                     lighting=li["en"], device=dv["en"],
-                    imperfection=rng.choice(imperfections),
+                    imperfection=rng.choice(imperfections), no_text=NO_TEXT,
                 ),
                 "combo": {"look": look["id"], "hairstyle": hs["id"], "clothing": cl["id"],
                           "shot": sh["id"], "place": pl["id"], "expression": ex["ko"],
@@ -200,6 +215,7 @@ def build_batch(seed, noface, person, mode="daily"):
                 phone_text=phone_text, place=pl["en"], expression=ex["en"],
                 lighting=li["en"], device=dv["en"],
                 imperfection=rng.choice(imperfections),
+                no_text=NO_TEXT,
             ),
             "combo": {"hairstyle": hs["id"], "clothing": cl["id"], "shot": sh["id"],
                       "place": pl["id"], "expression": ex["ko"],
@@ -236,11 +252,19 @@ def check_batch(items):
         for word in SAFETY_BANNED:
             if word in low:
                 hits.append((it["id"], "safety:" + word))
+        for word in BANNED_SUBJECTS:
+            total = low.count(word)
+            if not total:
+                continue
+            negated = len(re.findall(
+                r"(?:no|without|not|removed)\s+(?:\w+\s+){0,2}" + re.escape(word), low))
+            if total - negated > 0:
+                hits.append((it["id"], "subject:" + word))
     return hits
 
 
 def main(argv=None):
-    ap = argparse.ArgumentParser(description="Mio feed random prompt generator (v2.1, anti-AI-tell)")
+    ap = argparse.ArgumentParser(description="Mio feed random prompt generator (v3.1, Seoul / anti-AI-tell)")
     ap.add_argument("--seed", type=int, default=20261116)
     ap.add_argument("--noface", type=int, default=4, help="number of no-face daily cuts")
     ap.add_argument("--person", type=int, default=8, help="number of person cuts")
@@ -285,7 +309,8 @@ def main(argv=None):
         if hits:
             print("banned keyword hits:", hits, file=sys.stderr)
             return 2
-        print(f"check: clean ({len(BANNED)} AI-gloss phrases + {len(SAFETY_BANNED)} safety phrases scanned)")
+        print(f"check: clean ({len(BANNED)} AI-gloss phrases + {len(SAFETY_BANNED)} safety "
+              f"phrases + {len(BANNED_SUBJECTS)} text/book subjects scanned)")
 
     if args.json_path:
         p = Path(args.json_path)

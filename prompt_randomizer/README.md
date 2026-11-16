@@ -5,6 +5,8 @@
 > 기운님 피드백 1: *"앞머리가 너무 일정하지 않나 ㅋㅋ 상황이랑. 좀 다양하게 하고 그냥 일상사진부터 올려야 하니까 그런 것도 기획해서, 옷도 다양하게 하고 이런 거 랜덤으로 뽑아주는 깃 레포 있으면 그런 거 쓰자"*
 >
 > 기운님 피드백 2: *"너무 ai 스럽거나 아이폰 너무예전꺼거나 구도자체가 ai 스러운거는 다시만들자"* → **v2.1 개정** (AI 티 제거 · 최신 아이폰 고정 · 현실적 일상 구도)
+>
+> 기운님 피드백 3: *"근데 책은 좀 그렇지않나 글자 완벽하지않을거아냐 ai 생성이 그리고 일본인인데 한국사는게 요즘 유행같던데"* → **v3.1 개정** (서울 거주 전환 · 책·글자 피사체 전면 배제)
 
 ## 참고 오픈소스
 
@@ -19,6 +21,18 @@
 | `examples/seed_20261116.json` | v2.1 생성기로 뽑은 12컷 배치 (재현용) |
 | `examples/seed_20261116.md` | 같은 배치의 표 형식 요약 |
 | `examples/seed_20261116_glamour.json` / `.md` | v3 glamour 모드로 뽑은 8컷 배치 |
+| `examples/seed_20261116_seoul.json` / `.md` | v3.1 서울 노페이스 배치 (책·글자 0) |
+
+## v3.1에서 바뀐 것 (2026-11-16) — 서울 거주 + 책·글자 배제
+
+| 항목 | v2.1 | v3.1 |
+| --- | --- | --- |
+| 콘셉트 | 21세, 일본 도쿄 자취 | **한국(서울) 거주 일본인** · 서울 원룸 자취 |
+| 글자 피사체 | 펼친 책·책등·메뉴판·영수증·자판기 허용 | **전면 제외.** `meta.banned_subjects` 15개를 `--check`가 검사(`subject:` 위반 → exit 2) |
+| 프롬프트 문장 |– | 모든 컷에 `meta.mandatory_no_text` 문장 삽입 (`No printed words anywhere in the frame: no book, no open book, …`) |
+| `no_face_scenes` | 16종 (도쿄 기준) | **18종 서울 기준 재작성** — 서울 원룸 창가·성수 카페·주택가 골목·한강 노을·국밥집·지하철·버스정류장·옥상 빨래 등. 시험·서가·자판기·영수증 장면 삭제 |
+| `places_person` | 14종 (도쿄 기준) | **14종 서울 기준 재작성.** 간판·가격표·포스터·노선도·메뉴판이 있는 묘사를 전부 `no lettering` 문구로 교체(서점 잡지 코너 → `seoul_goods_shop` 소품숍) |
+| glamour | 그대로 | 침실을 서울 원룸으로, 밤 겨리 자판기·책이 있는 협탁·달력을 걷어냄 |
 
 ## v2.1에서 바뀐 것 (2026-11-16)
 
@@ -36,11 +50,11 @@
 
 | 카테고리 | 개수 | 내용 |
 | --- | --- | --- |
-| `no_face_scenes` | 16 | 말차 디저트·서점 서가·밤 자판기 골목·아침 책상·전철 창밖·장바구니·신발 OOTD·동전 세탁소·비 오는 창가·식당 테이블·편의점 계산대 등 (장면마다 조명 고정) |
+| `no_face_scenes` | 18 | 서울 원룸 창가 아침 테이블·성수 카페 디저트·주택가 골목 저녁·한강 노을·침대 발치·빨래바구니·원룸 창가·국밥집·편의점 앞·지하철 플랫폼·전철 창밖·버스정류장·횡단보도·슈퍼 장바구니·비 오는 창가·담장 자전거·옥상 빨래·카페 구석 화분 **(책·간판·메뉴판 0)** |
 | `hairstyles` | 14 | 센터 가르마(앞머리 없음)·사이드 스웹트·높은 포니테일·로우 번·하프업·자연 웨이브·비니·베레모·볼캡·사이드 브레이드·단발 보브·샤워 후 물기 등 |
 | `clothing` | 14 | 후드+조거·스트라이프 옥스포드·트렌치·데님 자켓·플로럴 원피스·가죽 자켓·파자마·가디건+롱스커트·오트밀 니트+와이드 연청·트레이닝·울코트 등 |
 | `person_shots` | 12 | 친구가 식탁 맞은편에서 찍은 컷·한 입 먹기 직전·걸어가다 멈춘 순간·3/4 뒷모습·거울 셀카(최신 아이폰 노출)·진열대 구경·벤치에서 기다리기·폰 보는 옆모습·어깨너머·멀리서 찍은 스냅·창가 옆얼굴·자전거 오르기 |
-| `places_person` | 14 | 동네 식당·카페 창가·낮 공원 벤치·구제숍·지하철 플랫폼 벤치·엘리베이터 거울·서점 잡지 코너·주택가 골목·편의점 앞·세탁소·전철 좌석·주방·횡단보도·레코드숍 (실내/실외 + 가능한 조명 목록 포함) |
+| `places_person` | 14 | 서울 동네 백반집·카페 창가·한강공원 벤치·성수 구제숍·지하철 플랫폼 벤치·오피스텔 엘리베이터·성수 소품숍·주택가 골목·편의점 앞·세탁소·지하철 좌석·원룸 주방·횡단보도·레코드숍 (실내/실외 + 가능한 조명 목록 포함) |
 | `expressions` | 7 | 나른함·옅은 미소·눈웃음·졸린 눈·생각하는 표정·삐죽·말하다 만 입 모양 |
 | `devices` | 5 | 아이폰 15 프로·16 프로·15 프로 3배·16 프로 3배·15 프로 초광각 **(최신 기기만)** |
 | `imperfections` | 8 | 기울어진 프레이밍·지나가는 사람 어깨가 프레임에 걸림·핀이 살짝 뒤로·손 모션블러·정수리가 프레임 끝·한쪽 과노출 등 |
@@ -53,6 +67,7 @@
 3. **최신 아이폰 고정** — 카메라 풀에 구형 기기·폴라로이드·필름이 없습니다. 거울 셀카는 `device_force`로 최신 Pro가 강제되고, 폰 뒷면 3구 카메라 묘사가 프롬프트에 붙습니다.
 4. **불완전함 강제** — 모든 컷에 `Everyday and imperfect:` 문장(기울기·비중앙·모션블러 등)과 `Real skin with visible pores ... no beauty retouching, no skin smoothing, no glow`가 들어갑니다.
 5. **AI 화보어 금지** — `meta.banned_keywords` 15개를 `--check`가 검사합니다. `cinematic`·`bokeh`·`8k`·`masterpiece`·`perfect skin` 같은 단어가 프롬프트에 남으면 exit code 2로 실패합니다.
+6. **글자 피사체 금지 (v3.1)** — 펼친 책·책등·간판·메뉴판·가격표·영수증·포장 라벨은 확대하면 AI 가짜 글자가 드러납니다. 모든 프롬프트에 `mandatory_no_text` 문장을 넣고, `meta.banned_subjects` 15개를 같은 `--check`가 검사합니다. `no book`·`no menu board`처럼 부정 지시문으로 쓰인 경우는 검사 전에 걸러냅니다.
 6. **정면 응시 최소화** — 인물 구도 12종 중 정면 카메라 응시는 0종. 시선이 접시·폰·친구·진열대로 향합니다.
 7. **얼굴만 유지** — 프롬프트 끝에 `Do not reproduce the reference pose, outfit, hairstyle or background.` 를 붙여 레퍼런스의 시스루 뱅·오프숄더 니트가 따라오지 않게 합니다.
 
@@ -73,7 +88,7 @@
 ```bash
 python3 generate_prompts.py --mode glamour --person 8 --check \
     --json examples/seed_20261116_glamour.json --markdown examples/seed_20261116_glamour.md
-# → check: clean (15 AI-gloss phrases + 12 safety phrases scanned)
+# → check: clean (15 AI-gloss phrases + 12 safety phrases + 15 text/book subjects scanned)
 ```
 
 ## 사용법
@@ -93,17 +108,19 @@ python3 generate_prompts.py --seed 42 --count 6
 python3 generate_prompts.py --list-seed 5
 ```
 
-출력 예 (v2.1):
+출력 예 (v3.1):
 
 ```
-[05] (person) 베레모 착용 · 트레이닝 세트 + 스니커즈 · 어깨 너머로 부르는 듯한 클로즈업 · 도쿄 주택가 골목길
+[05] (person) 베레모 착용 · 트레이닝 세트 + 스니커즈 · 어깨 너머로 부르는 듯한 클로즈업 · 서울 주택가 골목길
     A real amateur phone photo for an Instagram feed, taken on an iPhone 16 Pro 3x telephoto lens...
+    Place: a narrow residential street in a Seoul neighborhood ... no shop signs, no nameplates and no lettering.
     Everyday and imperfect: there is slight motion blur on her hand. Real skin with visible pores ...
+    No printed words anywhere in the frame: no book, no open book, no book spines, no menu board, ...
     Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark.
 ```
 
 ```
-check: clean (15 AI-gloss phrases + 12 safety phrases scanned)
+check: clean (15 AI-gloss phrases + 12 safety phrases + 15 text/book subjects scanned)
 ```
 
 ## 이미지 생성으로 이어 붙이기
@@ -111,7 +128,7 @@ check: clean (15 AI-gloss phrases + 12 safety phrases scanned)
 - **노페이스 컷:** `images '<prompt>' --out work/mio_v2/raw/xx.jpg`
 - **인물 컷:** `images '<prompt>' --edit downloads/mio_master_clean.jpg --out work/mio_v2/raw/xx.jpg`
   (`mio_master_clean.jpg` = `338.jpg` 정면 마스터 크롭본)
-- 생성 후 **반드시 눈으로 검수**: ① AI/CG 광택이 나는지 ② 거울 셀카에 구형 아이폰이 잡혔는지 ③ 포즈가 억지스러운지 ④ 손가락·배경 글자가 깨졌는지. 걸리면 해당 컷만 프롬프트를 고쳐 재생성하고 최종 프롬프트를 `mio_feed_v2/README.md`에 남깁니다.
+- 생성 후 **반드시 눈으로 검수**: ① AI/CG 광택이 나는지 ② 거울 셀카에 구형 아이폰이 잡혔는지 ③ 포즈가 억지스러운지 ④ 손가락·소품이 깨졌는지 ⑤ **확대 시 글자가 보이는 피사체가 있는지**. 걸리면 해당 컷만 프롬프트를 고쳐 재생성하고 최종 프롬프트를 `mio_feed_seoul/README.md` 등에 남깁니다.
 - 4:5가 아닌 결과는 1080×1350 크롭으로 통일합니다(피사체 머리·손이 잘리지 않는 위치에서 크롭).
 
 ## 새 카테고리 아이템 추가

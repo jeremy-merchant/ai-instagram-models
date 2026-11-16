@@ -1,0 +1,41 @@
+{
+  "seed": 20261116,
+  "items": [
+    {
+      "id": "01",
+      "mode": "noface",
+      "seed": 20261116,
+      "label_ko": "성수동 카페 테이블, 아이스 아메리카노·바스크 치즈케이크·선글라스·폰 엎어둔 채",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 15 Pro 3x telephoto lens, slightly compressed. Scene: a worn wooden table for two in a small corner cafe in Seongsu-dong, Seoul, a tall glass of iced americano, a square slice of basque cheesecake on a plain cream plate, folded black sunglasses, a phone lying face down with only its back showing, a plain painted concrete wall behind with no menu board, no posters and no lettering. flat late-afternoon daylight from a window mixed with one dim warm bulb. Everyday and imperfect: the phone was tilted and the verticals lean a little. Natural phone noise, ordinary exposure, realistic texture, plain colour. No printed words anywhere in the frame: no book, no open book, no book spines, no menu board, no price sign, no receipt, no poster with lettering, no labels on packaging, no signage on buildings. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark, no face visible.",
+      "combo": {
+        "scene": "seoul_cafe_dessert",
+        "light": "늦은 오후 창가 빛 + 약한 전구",
+        "device": "아이폰 15 프로 3배 망원"
+      }
+    },
+    {
+      "id": "02",
+      "mode": "noface",
+      "seed": 20261116,
+      "label_ko": "옥상 빨래와 서울 스카이라인 (원거리)",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 16 Pro main camera. Scene: the rooftop of a low Seoul apartment building at dusk, laundry hanging on a line, a water tank and a plastic chair, the city skyline far away and slightly hazy, every building plain with no signs and no lettering. low blue dusk light, the sky still pale. Everyday and imperfect: the phone was tilted and the verticals lean a little. Natural phone noise, ordinary exposure, realistic texture, plain colour. No printed words anywhere in the frame: no book, no open book, no book spines, no menu board, no price sign, no receipt, no poster with lettering, no labels on packaging, no signage on buildings. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark, no face visible.",
+      "combo": {
+        "scene": "seoul_rooftop_dusk",
+        "light": "해질녘 낮은 빛",
+        "device": "아이폰 16 프로"
+      }
+    },
+    {
+      "id": "03",
+      "mode": "noface",
+      "seed": 20261116,
+      "label_ko": "동네 국밥집 테이블, 반찬과 물컵 (메뉴판 없음)",
+      "prompt": "A real amateur phone photo for an Instagram feed, taken on an iPhone 16 Pro 3x telephoto lens, slightly compressed. Scene: a worn formica table in a small neighborhood gukbap diner in Seoul, a half-eaten bowl of soup with rice, three small side dishes, a stainless water cup, a plastic spoon, chairs pushed back, a plain tiled wall behind with no menu board and no lettering. one fluorescent tube overhead plus flat daylight from the door. Everyday and imperfect: a passer-by's shoulder cuts into the edge of the frame. Natural phone noise, ordinary exposure, realistic texture, plain colour. No printed words anywhere in the frame: no book, no open book, no book spines, no menu board, no price sign, no receipt, no poster with lettering, no labels on packaging, no signage on buildings. Vertical 4:5. No studio lighting, no bokeh, no cinematic colour grade, no HDR, no text, no watermark, no face visible.",
+      "combo": {
+        "scene": "seoul_gukbap_table",
+        "light": "식당 형광등 + 창가 빛",
+        "device": "아이폰 16 프로 3배 망원"
+      }
+    }
+  ]
+}

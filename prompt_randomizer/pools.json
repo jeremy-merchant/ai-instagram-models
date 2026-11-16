@@ -1,11 +1,11 @@
 {
   "meta": {
     "name": "Mio Daily Feed Prompt Pools",
-    "model": "Mio (@_3io.log_) — 21, Tokyo, black hair, gray-tinted eyes, pale skin",
+    "model": "Mio (@_3io.log_) — 21, Japanese, black hair, gray-tinted eyes, pale skin, living alone in Seoul",
     "structure_credit": "Category-pool structure inspired by fairy-root/Flux-Prompt-Generator (MIT) — https://github.com/fairy-root/Flux-Prompt-Generator",
-    "revision": "v3 (2026-11-16) — glamour(노출·바이럴) 모드 추가",
+    "revision": "v3.1 (2026-11-16) — 서울 거주 전환 + 책·글자 배제",
     "updated": "2026-11-16",
-    "revision_note_ko": "기운님 피드백 \"너무 ai 스럽거나 아이폰 너무예전꺼거나 구도자체가 ai 스러운거는 다시만들자\" 반영. AI 화보 키워드(시네마틱·골든아워 역광·보케·8k·masterpiece·perfect skin)를 풀에서 전면 삭제하고, 카메라는 최신 아이폰(15/16 Pro)만 남겼으며, 장소·구도 풀을 '친구가 그냥 찍어준 일상 스냅' 기준으로 다시 썼습니다.",
+    "revision_note_ko": "기운님 피드백 \"근데 책은 좀 그렇지않나 글자 완벽하지않을거아냐 ai 생성이 그리고 일본인인데 한국사는게 요즘 유행같던데\" 반영. ① 콘셉트를 '도쿄 자취' → '서울 자취'로 전환 ② 펼친 책·책등·간판·메뉴판·영수증·라벨처럼 확대하면 AI 가짜 글자가 드러나는 피사체를 전 장면에서 제거 ③ no_face_scenes·places_person 풀을 서울 기준으로 다시 썼습니다.",
     "banned_keywords": [
       "cinematic",
       "golden hour",
@@ -39,120 +39,152 @@
       "bedroom eyes",
       "lingerie set"
     ],
-    "revision_note_v3_ko": "기운님 지시 \\\"노출있는것도 만들어주고\\\" 반영. 수영복·짐웨어·호텔/료칸/리조트 맥락 전용 풀과 --mode glamour 를 추가했습니다. 섀도우밴 회피를 위해 언더웨어/란제리·성인 화보 어휘는 safety_banned_keywords 로 검사합니다."
+    "revision_note_v3_ko": "기운님 지시 \\\"노출있는것도 만들어주고\\\" 반영. 수영복·짐웨어·호텔/료칸/리조트 맥락 전용 풀과 --mode glamour 를 추가했습니다. 섀도우밴 회피를 위해 언더웨어/란제리·성인 화보 어휘는 safety_banned_keywords 로 검사합니다.",
+    "banned_subjects": [
+      "open book",
+      "book spine",
+      "bookshelf",
+      "bookstore",
+      "magazine cover",
+      "newspaper",
+      "menu board",
+      "price sign",
+      "price board",
+      "receipt",
+      "poster with text",
+      "signboard",
+      "label on packaging",
+      "hangul sign",
+      "japanese sign"
+    ],
+    "mandatory_no_text": "No printed words anywhere in the frame: no book, no open book, no book spines, no menu board, no price sign, no receipt, no poster with lettering, no labels on packaging, no signage on buildings."
   },
   "no_face_scenes": [
     {
-      "id": "cafe_latte_table",
-      "ko": "도쿄 카페 테이블, 라떼와 크루아상 (손만)",
-      "en": "a small Tokyo cafe table by the window, a half-finished latte and a flaky croissant on a ceramic plate, one hand holding the cup, no face in frame",
-      "light_ko": "오후 창가 자연광",
-      "light_en": "flat afternoon daylight from the window"
+      "id": "seoul_morning_table",
+      "ko": "서울 원룸 창가 아침 테이블, 아이스 아메리카노 머그·토스트·이어폰 케이스 (창밖 서울 빌라)",
+      "en": "a small wooden table pushed against the window of a tiny Seoul one-room studio apartment in the morning, a plain unbranded ribbed ceramic mug of iced americano, a white earbud case with no logo, a small plate with buttered toast and half a strawberry, ordinary low-rise Seoul villa roofs and pale apartment blocks seen through the glass, every building plain with no shop signs and no lettering",
+      "light_ko": "흐린 아침 창가 빛",
+      "light_en": "flat cool overcast morning daylight from the window"
     },
     {
-      "id": "morning_window_desk",
-      "ko": "아침 창가 책상, 커피와 펼친 책 (손끝만)",
-      "en": "a quiet morning desk beside a window, a ceramic mug of black coffee, an open paperback with a bookmark, a small plant and a linen pouch, only the edge of a hand visible, no face",
-      "light_ko": "아침 창가 빛",
-      "light_en": "plain morning daylight, slightly cool"
+      "id": "seoul_cafe_dessert",
+      "ko": "성수동 카페 테이블, 아이스 아메리카노·바스크 치즈케이크·선글라스·폰 엎어둔 채",
+      "en": "a worn wooden table for two in a small corner cafe in Seongsu-dong, Seoul, a tall glass of iced americano, a square slice of basque cheesecake on a plain cream plate, folded black sunglasses, a phone lying face down with only its back showing, a plain painted concrete wall behind with no menu board, no posters and no lettering",
+      "light_ko": "늦은 오후 창가 빛 + 약한 전구",
+      "light_en": "flat late-afternoon daylight from a window mixed with one dim warm bulb"
     },
     {
-      "id": "tokyo_alley_night",
-      "ko": "밤의 도쿄 골목과 자판기",
-      "en": "a narrow Tokyo backstreet at night, a glowing vending machine, wet asphalt, tangled power lines overhead, no people, no face",
-      "light_ko": "밤 자판기 불빛",
-      "light_en": "night, lit only by the vending machine and a distant street lamp"
+      "id": "seoul_evening_alley",
+      "ko": "서울 주택가 골목 저녁, 골목 끝 지나가는 버스·가로등·자전거",
+      "en": "a quiet narrow residential alley in a Seoul neighborhood at dusk seen from several steps back, low brick and concrete walls, a stucco house with a tiled roof, a blue plastic recycling bin, a parked city bicycle and a small delivery scooter, one street lamp just switched on, a city bus passing as a soft blur where the alley meets the road, all walls and shutters plain and empty with no shop signs and no lettering",
+      "light_ko": "해질녘 가로등 불빛",
+      "light_en": "dim blue-grey dusk light with one street lamp"
     },
     {
-      "id": "train_platform_morning",
-      "ko": "아침 전철 플랫폼, 벤치와 지나가는 열차",
-      "en": "a suburban Tokyo train platform in the morning, an empty bench, a train passing blurred behind the glass, no people's faces",
-      "light_ko": "이른 아침 확산광",
-      "light_en": "pale early-morning daylight, slightly hazy"
+      "id": "seoul_hangang_sunset",
+      "ko": "한강 노을, 강변 자전거길과 먼 다리 실루엣",
+      "en": "the bank of the Han river in Seoul just before sunset, a paved riverside path, dry reeds, the far bridge reduced to a thin silhouette across the water, a couple of distant joggers, no signage and no lettering anywhere",
+      "light_ko": "해질녘 낮은 빛",
+      "light_en": "low flat light just before sunset, cool and slightly hazy"
     },
     {
-      "id": "train_window_scenery",
-      "ko": "전철 창밖 풍경과 이어폰 (무릎 위)",
-      "en": "view from a train seat, white earphone cable resting on a denim lap, the city passing outside the window, no face",
-      "light_ko": "흐린 날 차창 빛",
-      "light_en": "flat overcast daylight through the train window"
-    },
-    {
-      "id": "grocery_basket",
-      "ko": "마트 장바구니와 장본 것들 (손만)",
-      "en": "a hand carrying a folded canvas tote full of groceries inside a small neighborhood supermarket, no face",
-      "light_ko": "마트 형광등",
-      "light_en": "cool fluorescent supermarket lighting"
-    },
-    {
-      "id": "shoes_ootd_sidewalk",
-      "ko": "보도블록 위 신발 클로즈업 OOTD",
-      "en": "close-up of white sneakers and cropped wide trousers standing on a Japanese sidewalk tile with fallen ginkgo leaves, shot from above, no face, no upper body",
-      "light_ko": "오후 확산광",
-      "light_en": "soft overcast afternoon light, mild shadow"
-    },
-    {
-      "id": "bookshelf_closeup",
-      "ko": "서점 서가 클로즈업, 책등과 손끝",
-      "en": "close-up of a bookstore shelf in Tokyo, spines of used books, a hand pulling out one novel, no face",
-      "light_ko": "서점 실내 조명",
-      "light_en": "warm indoor bookstore lighting"
-    },
-    {
-      "id": "konbini_snack_shelf",
-      "ko": "편의점 과자 진열대와 바구니",
-      "en": "a convenience store aisle in Japan, a small basket holding onigiri and a canned coffee, no face, no people",
-      "light_ko": "편의점 형광등",
-      "light_en": "cool fluorescent convenience-store lighting"
-    },
-    {
-      "id": "laundry_room",
-      "ko": "동전 세탁소, 돌아가는 세탁기",
-      "en": "a small Japanese coin laundry at dusk, two front-loading washing machines mid-cycle, a plastic chair, no people, no face",
-      "light_ko": "해질녘 실내 조명",
-      "light_en": "dusk light mixed with the laundry's fluorescent tubes"
-    },
-    {
-      "id": "rain_window_tea",
-      "ko": "비 내리는 창가, 유리잔과 손",
-      "en": "rain-streaked window with blurred city outside, a glass of barley tea and a hand resting on the sill, seen from behind the glass, no face",
-      "light_ko": "비 오는 날 확산광",
-      "light_en": "grey rainy daylight through wet glass"
-    },
-    {
-      "id": "bed_foot_book",
-      "ko": "침대 발치, 이불과 책과 발끝",
-      "en": "the foot of a rumpled white bed, an open book face-down on the blanket, one bare foot peeking from the duvet, no face",
+      "id": "seoul_bed_foot",
+      "ko": "자취방 침대 발치, 이불과 발끝 (책 없음)",
+      "en": "the foot of a rumpled white bed in a small Seoul studio apartment, a crumpled duvet and one bare foot peeking out, a plain wall and a charging cable on the floor beside the bed, no books and no paper anywhere",
       "light_ko": "아침 창가 빛",
       "light_en": "plain morning window light on white bedding"
     },
     {
-      "id": "dessert_plate_overhead",
-      "ko": "오버헤드 디저트 플레이트, 말차와 단팥",
-      "en": "overhead shot of a matcha parfait and a small plate of dorayaki on a wooden cafe table, condensation on the glass, no face, no people",
-      "light_ko": "카페 실내 조명",
-      "light_en": "ordinary cafe indoor lighting"
+      "id": "seoul_laundry_basket",
+      "ko": "원룸 빨래바구니와 널어둔 옷, 창가",
+      "en": "a plastic laundry basket overflowing with clothes on the floor of a small Seoul studio apartment, a few shirts and towels hung on a folding drying rack in front of the window, a plain wall, no labels, no printed packaging and no lettering",
+      "light_ko": "흐린 오후 확산광",
+      "light_en": "flat overcast afternoon light through the window"
     },
     {
-      "id": "bicycle_morning_street",
-      "ko": "아침 주택가 골목의 자전거",
-      "en": "a city bicycle parked against a low concrete wall on a quiet Tokyo residential street in the morning, potted plants, no people, no face",
+      "id": "seoul_one_room_window",
+      "ko": "원룸 창가 커튼과 화분, 오후",
+      "en": "the window corner of a small Seoul studio apartment, a plain cotton curtain half drawn, a small potted plant and a plastic watering bottle on the sill, worn wooden floorboards, a plain wall, nothing with printing or lettering in the frame",
+      "light_ko": "오후 창가 자연광",
+      "light_en": "plain afternoon daylight through the curtain"
+    },
+    {
+      "id": "seoul_gukbap_table",
+      "ko": "동네 국밥집 테이블, 반찬과 물컵 (메뉴판 없음)",
+      "en": "a worn formica table in a small neighborhood gukbap diner in Seoul, a half-eaten bowl of soup with rice, three small side dishes, a stainless water cup, a plastic spoon, chairs pushed back, a plain tiled wall behind with no menu board and no lettering",
+      "light_ko": "식당 형광등 + 창가 빛",
+      "light_en": "one fluorescent tube overhead plus flat daylight from the door"
+    },
+    {
+      "id": "seoul_pyeonui_front_night",
+      "ko": "편의점 앞 밤, 유리문 불빛 (포스터·가격표 없음)",
+      "en": "the street in front of a Seoul convenience store at night, harsh pale light spilling from the glass door, a bicycle leaning on the window, plain clean glass with no posters, no price signs and no lettering on it, the alley beyond in darkness",
+      "light_ko": "편의점 형광등 하향광",
+      "light_en": "harsh white fluorescent spill from the storefront"
+    },
+    {
+      "id": "seoul_subway_platform_morning",
+      "ko": "지하철 플랫폼 아침, 빈 벤치와 지나가는 열차 (안내판 없음)",
+      "en": "a Seoul subway platform in the early morning, an empty bench, a train passing blurred behind the glass doors, plain tiled pillars and a bare wall with no route map, no departure board and no lettering",
+      "light_ko": "이른 아침 확산광",
+      "light_en": "pale early-morning daylight mixed with cool platform light"
+    },
+    {
+      "id": "seoul_subway_window",
+      "ko": "지하철 창밖 풍경과 무릎 위 이어폰",
+      "en": "the view from a seat on a Seoul subway train, a white earphone cable resting on a denim lap, apartment blocks and bare trees passing outside the window, no adverts, no route map and no lettering in the frame",
+      "light_ko": "흐린 날 차창 빛",
+      "light_en": "flat overcast daylight through the train window"
+    },
+    {
+      "id": "seoul_bus_stop",
+      "ko": "버스 정류장, 벤치와 지나가는 시내버스",
+      "en": "a small Seoul bus stop on a side street, a metal bench, a blue city bus passing a few metres away as a soft blur, a bare tree and a low wall behind, the bus and the stop kept plain with no route numbers and no lettering",
+      "light_ko": "오후 확산광",
+      "light_en": "soft overcast afternoon light"
+    },
+    {
+      "id": "seoul_crosswalk_morning",
+      "ko": "횡단보도 앞 아침, 신호등만 (간판 없음)",
+      "en": "a crossing in a Seoul residential neighborhood in the morning, white stripes on the asphalt, a traffic light on its pole, one person waiting far at the edge of the frame, plain low buildings behind with no shop signs and no lettering",
+      "light_ko": "아침 확산광",
+      "light_en": "flat pale morning daylight"
+    },
+    {
+      "id": "seoul_market_basket",
+      "ko": "동네 슈퍼 장바구니, 라벨 없는 채소와 과일",
+      "en": "a folding canvas tote with loose unpackaged vegetables and fruit inside, standing on the floor of a small neighborhood supermarket in Seoul, plain metal shelving and a tiled floor, no price labels, no packaging with printing and no lettering",
+      "light_ko": "마트 형광등",
+      "light_en": "cool fluorescent supermarket lighting"
+    },
+    {
+      "id": "seoul_rain_window_tea",
+      "ko": "비 내리는 창가, 보리차 잔과 손",
+      "en": "a rain-streaked window in a Seoul apartment with the low-rise street outside gone soft and grey, a glass of barley tea on the sill and one hand resting beside it, seen from behind the glass, no lettering on the glass or outside it",
+      "light_ko": "비 오는 날 확산광",
+      "light_en": "grey rainy daylight through wet glass"
+    },
+    {
+      "id": "seoul_bicycle_wall",
+      "ko": "주택가 담장에 기댄 자전거와 화분",
+      "en": "a city bicycle parked against a low brick wall on a quiet Seoul residential street in the morning, a row of potted plants on the concrete, a downpipe, no signs, no nameplates and no lettering",
       "light_ko": "아침 자연광",
       "light_en": "plain morning daylight, soft shadows"
     },
     {
-      "id": "diner_table_setting",
-      "ko": "동네 식당 테이블, 반찬과 물컵",
-      "en": "a worn wooden table in a small Tokyo diner, a half-eaten plate of grilled fish and rice, a water glass, a plastic container lid, chairs pushed back, no face",
-      "light_ko": "식당 형광등 + 창가 빛",
-      "light_en": "one fluorescent tube overhead plus flat daylight from the window"
+      "id": "seoul_rooftop_dusk",
+      "ko": "옥상 빨래와 서울 스카이라인 (원거리)",
+      "en": "the rooftop of a low Seoul apartment building at dusk, laundry hanging on a line, a water tank and a plastic chair, the city skyline far away and slightly hazy, every building plain with no signs and no lettering",
+      "light_ko": "해질녘 낮은 빛",
+      "light_en": "low blue dusk light, the sky still pale"
     },
     {
-      "id": "convenience_counter_receipt",
-      "ko": "편의점 계산대 위 영수증과 커피",
-      "en": "a convenience store counter with a paper receipt, a hot canned coffee and a hand reaching for it, no face",
-      "light_ko": "편의점 형광등",
-      "light_en": "cool fluorescent convenience-store lighting"
+      "id": "seoul_cafe_corner_plant",
+      "ko": "카페 구석 창가, 화분 그림자 (책 없음)",
+      "en": "a corner table by the window in a small Seoul cafe, a paper cup of iced coffee, a plant casting a soft shadow on a plain plaster wall, an empty wooden chair, no books, no magazines and no lettering anywhere",
+      "light_ko": "오후 확산광",
+      "light_en": "flat afternoon daylight through the window"
     }
   ],
   "hairstyles": [
@@ -306,9 +338,9 @@
       "en": "The photo was taken by the friend sitting across the table, one-handed; she is in the middle of a sentence, eyes on her friend or on her food, not on the lens.",
       "io": "in",
       "place_ids": [
-        "diner_table",
-        "cafe_window_seat",
-        "her_kitchen"
+        "seoul_diner_table",
+        "seoul_cafe_window_seat",
+        "one_room_kitchen"
       ]
     },
     {
@@ -317,9 +349,9 @@
       "en": "Caught just before a bite, chopsticks or a fork in her hand, her eyes down on the plate.",
       "io": "in",
       "place_ids": [
-        "diner_table",
-        "cafe_window_seat",
-        "her_kitchen"
+        "seoul_diner_table",
+        "seoul_cafe_window_seat",
+        "one_room_kitchen"
       ]
     },
     {
@@ -328,9 +360,9 @@
       "en": "She has stopped mid-step while walking and turned her head slightly, a small bag in one hand, one foot still lifting.",
       "io": "out",
       "place_ids": [
-        "tokyo_alley_walk",
-        "crosswalk",
-        "konbini_front"
+        "seoul_alley_walk",
+        "seoul_crosswalk",
+        "seoul_pyeonui_front"
       ]
     },
     {
@@ -339,8 +371,8 @@
       "en": "Seen from behind at a slight angle as she walks away, one foot mid-step, head turned a little to the left.",
       "io": "out",
       "place_ids": [
-        "tokyo_alley_walk",
-        "crosswalk"
+        "seoul_alley_walk",
+        "seoul_crosswalk"
       ]
     },
     {
@@ -351,9 +383,9 @@
       "device_force": "iphone_current_pro",
       "phone_text": "The phone in her hand is a current iPhone Pro: a large square camera plate on the upper left with three big lenses in a triangle plus a small flash, natural titanium or white titanium body, clearly the newest model and not an older iPhone.",
       "place_ids": [
-        "elevator_mirror",
-        "her_kitchen",
-        "vintage_shop"
+        "officetel_elevator",
+        "one_room_kitchen",
+        "seongsu_vintage_shop"
       ]
     },
     {
@@ -362,9 +394,9 @@
       "en": "She stands at a display holding an item up to look at it, head slightly bowed, seen from two metres away at an angle.",
       "io": "in",
       "place_ids": [
-        "vintage_shop",
-        "bookstore_magazine_corner",
-        "record_shop"
+        "seongsu_vintage_shop",
+        "seoul_goods_shop",
+        "seoul_record_shop"
       ]
     },
     {
@@ -373,9 +405,9 @@
       "en": "She sits waiting on a bench, leaning forward a little, a bag on her lap, looking down at her phone, seen from the side by whoever sits next to her.",
       "io": "in",
       "place_ids": [
-        "subway_platform_bench",
-        "train_seat",
-        "park_bench_day"
+        "seoul_subway_platform",
+        "seoul_subway_seat",
+        "hangang_park_bench"
       ]
     },
     {
@@ -391,9 +423,9 @@
       "en": "She has just turned her head back over her shoulder because the friend called her name; only three-quarters of her face is visible.",
       "io": null,
       "place_ids": [
-        "konbini_front",
-        "tokyo_alley_walk",
-        "crosswalk"
+        "seoul_pyeonui_front",
+        "seoul_alley_walk",
+        "seoul_crosswalk"
       ]
     },
     {
@@ -402,9 +434,9 @@
       "en": "A candid snap taken from a few metres away by a friend, she is not aware of it and sits off-centre in the frame.",
       "io": null,
       "place_ids": [
-        "park_bench_day",
-        "crosswalk",
-        "tokyo_alley_walk"
+        "hangang_park_bench",
+        "seoul_crosswalk",
+        "seoul_alley_walk"
       ]
     },
     {
@@ -413,9 +445,9 @@
       "en": "She sits by the window with a drink, chin propped on one hand, looking at the street outside rather than the camera.",
       "io": "in",
       "place_ids": [
-        "cafe_window_seat",
-        "train_seat",
-        "her_kitchen"
+        "seoul_cafe_window_seat",
+        "seoul_subway_seat",
+        "one_room_kitchen"
       ]
     },
     {
@@ -424,8 +456,8 @@
       "en": "Mid-motion swinging one leg over a city bicycle, body angled away.",
       "io": "out",
       "place_ids": [
-        "park_bench_day",
-        "tokyo_alley_walk"
+        "hangang_park_bench",
+        "seoul_alley_walk"
       ]
     }
   ],
@@ -461,89 +493,69 @@
   ],
   "places_person": [
     {
-      "id": "diner_table",
-      "ko": "동네 정식당·브런치 카페 테이블",
-      "en": "a small neighborhood diner in Tokyo, worn wooden table, plates and a water glass between her and the friend",
+      "id": "seoul_diner_table",
+      "ko": "동네 백반집 테이블",
+      "en": "a small neighborhood diner in Seoul, a worn wooden table, plates and a stainless water glass between her and the friend, a plain tiled wall behind with no menu board and no lettering",
       "io": "in",
       "lights": [
         {
           "ko": "식당 형광등 + 창가 빛",
           "en": "one fluorescent tube overhead plus flat daylight from the window"
-        },
-        {
-          "ko": "실내 일반 조명",
-          "en": "ordinary indoor lighting, slightly uneven"
         }
       ]
     },
     {
-      "id": "cafe_window_seat",
+      "id": "seoul_cafe_window_seat",
       "ko": "동네 카페 창가 자리",
-      "en": "a window seat of a small neighborhood cafe, cups on the table, the street behind the glass",
+      "en": "a window seat of a small cafe in a Seoul back street, cups on the table, the low-rise street behind the glass, no menu board, no posters and no lettering",
       "io": "in",
       "lights": [
         {
           "ko": "창가 자연광",
           "en": "plain daylight from the window"
-        },
-        {
-          "ko": "카페 실내 조명",
-          "en": "ordinary cafe lighting mixed with daylight"
         }
       ]
     },
     {
-      "id": "park_bench_day",
-      "ko": "낮 시간대 도쿄 공원 벤치",
-      "en": "a slatted wooden bench in a Tokyo park, a low hedge and a bicycle behind her, people walking far down the path",
+      "id": "hangang_park_bench",
+      "ko": "한강공원 벤치 (낮)",
+      "en": "a slatted wooden bench in a riverside park on the Han in Seoul, a low hedge and a parked bicycle behind her, people walking far down the path, no signs and no lettering",
       "io": "out",
       "lights": [
         {
           "ko": "흐린 날 확산광",
           "en": "flat overcast daylight, no sun"
-        },
-        {
-          "ko": "가을 오후 확산광",
-          "en": "soft autumn afternoon daylight through bare trees"
         }
       ]
     },
     {
-      "id": "vintage_shop",
-      "ko": "구제숍·잡화점 진열대 앞",
-      "en": "a cramped second-hand clothing and accessory shop in Shimokitazawa, racks of clothes, a price board, boxes on the floor",
+      "id": "seongsu_vintage_shop",
+      "ko": "성수동 구제숍 진열대 앞",
+      "en": "a cramped second-hand clothing and accessory shop in Seongsu-dong, Seoul, racks of clothes, cardboard boxes on the floor, a mirror leaning on the wall, no price board, no tags on the clothes and no lettering anywhere",
       "io": "in",
       "lights": [
         {
           "ko": "형광등 + 백열전구",
           "en": "a fluorescent tube plus one warm bulb, slightly green"
-        },
-        {
-          "ko": "가게 실내 조명",
-          "en": "plain shop lighting, uneven"
         }
       ]
     },
     {
-      "id": "subway_platform_bench",
+      "id": "seoul_subway_platform",
       "ko": "지하철 플랫폼 벤치",
-      "en": "a bench on a Tokyo subway platform, tiled pillar behind her, a departure board and one other passenger waiting",
+      "en": "a bench on a Seoul subway platform, a plain tiled pillar behind her, one other passenger waiting far away, no route map, no departure board and no lettering",
       "io": "in",
       "lights": [
         {
           "ko": "지하철 형광등",
           "en": "flat fluorescent platform light, cool white"
-        },
-        {
-          "ko": "플랫폼 형광등 + 어두운 승강장 끝",
-          "en": "fluorescent platform light with the dark far end of the platform"
         }
       ]
     },
     {
-      "id": "elevator_mirror",
-      "ko": "자취방 엘리베이터 거울",
-      "en": "the full-length mirror inside a small apartment elevator, metal doors and a paper shopping bag at the edge of the frame",
+      "id": "officetel_elevator",
+      "ko": "오피스텔 엘리베이터 거울",
+      "en": "the full-length mirror inside a small Seoul officetel elevator, brushed metal doors and a plain tote bag at the edge of the frame, no notice sheets and no lettering on the walls",
       "io": "in",
       "lights": [
         {
@@ -553,85 +565,69 @@
       ]
     },
     {
-      "id": "bookstore_magazine_corner",
-      "ko": "서점 잡지·아트북 코너",
-      "en": "a second-hand bookstore in Tokyo, tall wooden shelves of art books and magazines, paper labels sticking out, stacks on the floor, an aluminium step ladder",
+      "id": "seoul_goods_shop",
+      "ko": "성수 소품숍 진열대 (글자 없음)",
+      "en": "a small stationery and lifestyle goods shop in Seongsu-dong, Seoul, plain wooden shelves of ceramic cups, candles, cloth pouches and small plants, nothing printed or labelled, no lettering in the frame",
       "io": "in",
       "lights": [
         {
-          "ko": "서점 형광등 + 백열전구",
-          "en": "a fluorescent tube plus a warm bulb, slightly yellow"
+          "ko": "숍 실내 조명",
+          "en": "plain shop lighting, a little uneven"
         }
       ]
     },
     {
-      "id": "tokyo_alley_walk",
-      "ko": "도쿄 주택가 골목길",
-      "en": "a narrow residential street in Tokyo with parked bicycles, potted plants, a vending machine and tangled power lines",
+      "id": "seoul_alley_walk",
+      "ko": "서울 주택가 골목길",
+      "en": "a narrow residential street in a Seoul neighborhood with brick walls, potted plants, a parked bicycle and overhead cables, a stucco house with a tiled roof, no shop signs, no nameplates and no lettering",
       "io": "out",
       "lights": [
         {
           "ko": "흐린 날 확산광",
           "en": "flat overcast daylight, slightly cool"
-        },
-        {
-          "ko": "해질녘 실내외 혼합",
-          "en": "late afternoon flat light, no direct sun"
         }
       ]
     },
     {
-      "id": "konbini_front",
-      "ko": "편의점 앞",
-      "en": "the street in front of a Japanese convenience store at night, a bicycle against the window, posters on the glass",
+      "id": "seoul_pyeonui_front",
+      "ko": "편의점 앞 (밤)",
+      "en": "the street in front of a Seoul convenience store at night, a bicycle against the clean glass, no posters, no price signs and no lettering on the window, the alley beyond in darkness",
       "io": "out",
       "lights": [
         {
           "ko": "편의점 형광등",
           "en": "harsh white fluorescent spill from the storefront"
-        },
-        {
-          "ko": "편의점 형광등 + 어두운 골목",
-          "en": "storefront fluorescent light with the street beyond in darkness"
         }
       ]
     },
     {
-      "id": "laundromat",
+      "id": "seoul_laundromat",
       "ko": "동전 세탁소",
-      "en": "a coin laundry down the street, front-loading machines and a folding table",
+      "en": "a coin laundry down a Seoul side street, front-loading machines and a folding table, plain unmarked machines and walls, no lettering",
       "io": "in",
       "lights": [
         {
           "ko": "형광등",
           "en": "cool fluorescent tube lighting"
-        },
-        {
-          "ko": "해질녘 실내 조명",
-          "en": "dusk light mixed with fluorescent tubes"
         }
       ]
     },
     {
-      "id": "train_seat",
-      "ko": "전철 안 좌석",
-      "en": "a seat on a Tokyo commuter train, other passengers at the edge of the frame",
+      "id": "seoul_subway_seat",
+      "ko": "지하철 안 좌석",
+      "en": "a seat on a Seoul subway train, other passengers at the edge of the frame, plain windows with no adverts and no route map",
       "io": "in",
       "lights": [
         {
           "ko": "차창 확산광",
           "en": "flat daylight from the train window"
-        },
-        {
-          "ko": "전철 실내 형광등",
-          "en": "ordinary train interior lighting"
         }
       ]
     },
     {
-      "id": "her_kitchen",
-      "ko": "자취방 주방 카운터",
-      "en": "her tiny kitchen counter, a mug and a dish rack, the wall close behind her",
+      "id": "one_room_kitchen",
+      "ko": "원룸 주방 카운터",
+      "en": "her tiny one-room kitchen counter in Seoul, a mug and a dish rack, a plain wall close behind her, no printed packaging and no lettering",
       "io": "in",
       "lights": [
         {
@@ -641,9 +637,9 @@
       ]
     },
     {
-      "id": "crosswalk",
+      "id": "seoul_crosswalk",
       "ko": "횡단보도 앞",
-      "en": "a crossing in a Tokyo neighborhood, waiting for the light with a few other people at the edge of the frame",
+      "en": "a crossing in a Seoul residential neighborhood, waiting for the light with a few other people at the edge of the frame, plain low buildings with no shop signs and no lettering",
       "io": "out",
       "lights": [
         {
@@ -653,14 +649,14 @@
       ]
     },
     {
-      "id": "record_shop",
+      "id": "seoul_record_shop",
       "ko": "레코드숍 매장",
-      "en": "a cramped record shop, crates of LPs and a handwritten divider card",
+      "en": "a cramped record shop in Seoul, crates of LPs, plain blank divider cards, a practical lamp over the counter, no pricing signs and no lettering",
       "io": "in",
       "lights": [
         {
           "ko": "레코드숍 조명",
-          "en": "warm dim shop lighting with a practical lamp"
+          "en": "warm dim shop lighting with one practical lamp"
         }
       ]
     }
@@ -946,8 +942,8 @@
       },
       {
         "id": "g_apartment_bedroom",
-        "ko": "도쿄 자취방 침실 (밤)",
-        "en": "a small Tokyo apartment bedroom at night, a bed against the wall, a nightstand with books and a mug, a laundry basket, a calendar on the wall, a charging cable across the floor",
+        "ko": "서울 원룸 침실 (밤)",
+        "en": "a small Seoul studio apartment bedroom at night, a bed against the wall, a nightstand with a mug and a folded towel, a laundry basket, a charging cable across the floor, no books, no calendar and no lettering",
         "io": "in",
         "lights": [
           {
@@ -983,7 +979,7 @@
       {
         "id": "g_tokyo_street",
         "ko": "여름 도쿄 골목",
-        "en": "a narrow Tokyo lane on a hot summer day, a vending machine, potted plants outside a shop, a bicycle leaning on the wall, overhead cables, a few pedestrians far behind",
+        "en": "a narrow lane in a Japanese city on a hot summer day, a shuttered shop with a plain roller door, potted plants outside, a bicycle leaning on the wall, overhead cables, a few pedestrians far behind, no vending machine, no signage and no lettering",
         "io": "out",
         "lights": [
           {
