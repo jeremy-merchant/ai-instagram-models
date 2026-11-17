@@ -21,14 +21,14 @@ v1 원본에서 이미 미오 얼굴·구도·의상·배경·조명이 잡혀 �
 | `th_ref_05.jpg` | v2(`75a0982`) 유지 | `beanie` | 니트 비니 — 도로 연석에 앉은 컷 |
 | `th_ref_06.jpg` | v2(`75a0982`) 유지 | `half_up` | 흑갈색 반묶음, 이마 일부 노출 — 피크닉 벤치 |
 
-헤어 10종은 `prompt_randomizer/pools.json`의 `hairstyles`에서 서로 겹치지 않게 골랐고, 10컷 모두 **일자 시스루 뱅 0컷**입니다.
+헤어 10종은 `prompt_randomizer/pools.json`의 `hairstyles`에서 서로 겹치지 않게 골랐고, 10컷 모두 **이마를 덮는 일자 시스루 뱅이 없는 컷**입니다.
 
 ## 제작 방식 (교체 5컷)
 
 - `git show 9c5e0f3:generated/mio_batch2_beta/<파일>`로 v1 원본을 꺼내 `--edit` 입력으로 사용.
 - 프롬프트 구조 고정: `Keep everything in this image identical — exact same woman's face, eyes, nose, mouth, jawline, expression, pose, body proportions, outfit, props, lighting, camera angle, framing, and background. Change ONLY her hairstyle: {헤어}. Keep the same dark black-brown hair colour and the same photorealistic quality, skin texture and focus as the original photograph. Do not change the outfit, the background, the pose, the camera distance or anything else in the frame.`
   - v2에서 문제가 된 `Do not reproduce the reference pose, outfit, hairstyle or background.` 문구와 새 의상·새 장소 묘사는 **넣지 않았습니다**.
-- 검수: 컷마다 v1과 나란히 놓고 얼굴·구도 대조, YuNet 얼굴 박스로 구도 드리프트 정량 확인(전 컷 얼굴 크기·위치 편차 2% 이내).
+- 검수: 컷마다 v1과 나란히 놓고 얼굴·구도 대조(육안상 구도·포즈·의상·배경 동일), YuNet 얼굴 박스로 구도 드리프트 정량 확인(박스 위치 편차 1~2%, 크기 편차 2~10% — 헤어 볼륨 변화에 따른 검출 오차 포함).
 - 후처리: 1080×1350 리사이즈 → `Image.fromarray(np.array(img.convert("RGB")))` → `JPEG(quality=95, subsampling=0)`, APP0 제거.
   10컷 전부 `c2pa·caBX·jumb·xmp·Exif` raw 바이트 **0건**, `PIL.Image.info` **빈 dict**, 세그먼트는 DQT·SOF0·DHT·SOS만.
 
