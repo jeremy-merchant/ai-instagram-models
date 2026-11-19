@@ -1,10 +1,11 @@
-# generated — 미오 제작 컷 인덱스
+# generated — 미오·서린 제작 컷 인덱스
 
 | 폴더 / 파일 | 내용 |
 | --- | --- |
 | `mio_batch2_all_21_grid.jpg` | **배치2 통합 컨택트시트 21컷** (4000×2596, 7×3, A1~A11 알파 + B1~B10 베타, 라벨·캡션 포함, 메타데이터 0) |
 | `mio_batch2_alpha/` | 알파 몫 11컷 — `ref_02~10_clean.jpg`(당근 9), `th_01~02_clean.jpg`(스레드 2) + `alpha_11_grid.jpg`(4×3), `face_compare_grid.jpg` |
 | `mio_batch2_beta/` | 베타 몫 10컷 — `ig_ref_01~06.jpg`(인스타 6), `th_ref_03~06.jpg`(스레드 4) |
+| `seorin_inpaint/` | **서린 인페인트 8컷** — 원본 보존 얼굴 교체(`9512`·`9514`·`9522`·`9531`·`9551`·`9552`·`9553a`·`9553b`) + `seorin_inpaint_compare.jpg` 비교 시트(6쌍), 0 metadata |
 
 ## 공통 규격
 
